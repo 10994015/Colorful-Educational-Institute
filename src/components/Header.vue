@@ -1,8 +1,20 @@
 
 <script>
-import {reactive} from "vue";
+import {reactive, ref, computed} from "vue";
+import {useStore} from "vuex";
+import Menu from "@/components/Menu.vue";
 export default {
+    components:{
+        Menu
+    }
+    ,
     setup(){
+        const store = useStore();
+
+        console.log(store.getters.openMenu);
+        const openMenu = computed(()=>{
+            return store.getters.openMenu;
+        })
         const nav = reactive([
             {name:'首頁',url:'/'},
             {name:'關於我們',url:'/about'},
@@ -11,19 +23,24 @@ export default {
             {name:'場地租借',url:'###'},
             {name:'聯絡我們',url:'###'},
         ]);
-        return {nav};
+
+        const handopenMenu = ()=>{
+            openMenu.value = !openMenu.value;
+        }
+        return {nav, openMenu, handopenMenu};
     }
 }
 </script>
 <template>
     
     <header id="header">
-            <router-link to="/" id="logo"></router-link>
-            <i class="fas fa-bars" :class="{open:openMenu}" id="menu" @click="handopenMenu"></i>
-            <ul :class="{open:openMenu}">
-                <li v-for="item in nav" :key="item.name"><router-link :to="item.url">{{item.name}}</router-link></li>
-            </ul>
-        </header>
+        <router-link to="/" id="logo"></router-link>
+        <!-- <i class="fas fa-bars" :class="{open:openMenu}" id="menu" @click="handopenMenu"></i> -->
+        <ul :class="{open:openMenu}">
+            <li v-for="item in nav" :key="item.name"><router-link :to="item.url">{{item.name}}</router-link></li>
+        </ul>
+    <Menu />
+    </header>
 </template>
 
 <style lang="scss" scoped>
@@ -91,12 +108,15 @@ export default {
     }
 
     @media screen and (max-width:1024px){
-        justify-content: center;
+        justify-content: flex-start;
         padding:0;
         position: fixed;
         z-index: 99999999;
         #menu{
             display: block;
+        }
+        #logo{
+            margin-left:30px 
         }
         ul{
             position: fixed;
