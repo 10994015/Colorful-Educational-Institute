@@ -5,6 +5,7 @@ import Course from "@/components/Home/Course.vue";
 import Nurture from "@/components/Home/Nurture.vue";
 import Site from "@/components/Home/Site.vue";
 import Start from "@/components/Home/Start.vue";
+import Contact from "@/components/Home/Contact.vue";
 export default {
   components:{
     Banner,
@@ -12,6 +13,7 @@ export default {
     Nurture,
     Site,
     Start,
+    Contact,
   },
   setup(){
     const lorem = ref(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sapiente sequi rem maxime aliquid quod adipisci odit! Iusto, doloribus. Quo sed ratione dolorum dolores amet hic harum, eius aperiam aut.
@@ -20,6 +22,7 @@ export default {
             {title:"幫助您進行課程規劃"},
             {title:"人才培育"},
             {title:"場地租借"},
+            {title:"聯絡我們"},
         ]);
     return {title, lorem};
   }
@@ -30,5 +33,6 @@ export default {
   <Course :title="title" :lorem="lorem" />
   <Nurture  :title="title" :lorem="lorem" />
   <Site  :title="title"/>
+  <Contact :title="title" />
   <Start />
 </template>

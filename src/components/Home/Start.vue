@@ -7,15 +7,15 @@ export default {
 }
 </script>
 <template>
-  <section id="start">
-           <div>
-                <h1>Want to try it now</h1>
-                <a href="###" class="startBtn">START</a>
-           </div>
-           <div>
-               <img src="@/assets/images/start.jpg" alt="">
-           </div>
-        </section>
+<section id="start">
+    <div>
+        <h1>Want to try it now</h1>
+        <a href="###" class="startBtn">START</a>
+    </div>
+    <div>
+        <img src="@/assets/images/start.jpg" alt="">
+    </div>
+</section>
 </template>
 
 <style lang="scss" scoped>
