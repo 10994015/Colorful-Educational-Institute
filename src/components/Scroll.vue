@@ -1,13 +1,19 @@
 <script>
-import {onMounted, ref} from "vue";
+import {onMounted, ref, computed} from "vue";
+import {useStore} from "vuex";
 export default {
-    props:{
-        top:{
-            type:Function,
-            default:()=>{},
-        },
-    },
+    // props:{
+    //     top:{
+    //         type:Function,
+    //         default:()=>{},
+    //     },
+    // },
     setup(props){
+       const store = useStore();
+       console.log(store.getters.totop);
+        const totop = computed(()=>{
+            return store.getters.totop;
+        })
        const upBtn = ref(null);
        const isShow = ref(false);
        onMounted(()=>{
@@ -19,12 +25,12 @@ export default {
                 }
             });
        })
-        return {props, upBtn, isShow};
+        return {upBtn, isShow, totop};
     }
 }
 </script>
 <template>
-  <div id="scroll-top" @click="props.top" ref="upBtn" :class="{active:isShow}">
+  <div id="scroll-top" @click="totop" ref="upBtn" :class="{active:isShow}">
       <i class="fas fa-chevron-circle-up"></i>
   </div>
 </template>

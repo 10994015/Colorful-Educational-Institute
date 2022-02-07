@@ -11,13 +11,13 @@ export default {
     setup(){
         const store = useStore();
 
-        console.log(store.getters.openMenu);
+        // console.log(store.getters.openMenu);
         const openMenu = computed(()=>{
             return store.getters.openMenu;
         })
         const nav = reactive([
             {name:'首頁',url:'/'},
-            {name:'關於我們',url:'/about'},
+            {name:'最新消息',url:'/Latestnews'},
             {name:'課程規劃',url:'/Course'},
             {name:'人才培育',url:'###'},
             {name:'場地租借',url:'###'},
