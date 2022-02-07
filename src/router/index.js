@@ -24,6 +24,10 @@ const routes = [
     path:'/Latestnews',
     name:'Latestnews',
     component:()=> import('../views/Latestnews.vue')
+  },{
+    path:'/Latestnews/:id',
+    name:'Latestnews_id',
+    component:()=> import('../views/Latestnews/_id.vue')
   }
 ]
 
