@@ -4,7 +4,6 @@ import Banner from "@/components/Home/Banner.vue";
 import Course from "@/components/Home/Course.vue";
 import Nurture from "@/components/Home/Nurture.vue";
 import Site from "@/components/Home/Site.vue";
-import Start from "@/components/Home/Start.vue";
 import Contact from "@/components/Home/Contact.vue";
 export default {
   components:{
@@ -12,7 +11,6 @@ export default {
     Course,
     Nurture,
     Site,
-    Start,
     Contact,
   },
   setup(){
@@ -34,5 +32,4 @@ export default {
   <Nurture  :title="title" :lorem="lorem" />
   <Site  :title="title"/>
   <Contact :title="title" />
-  <Start />
 </template>

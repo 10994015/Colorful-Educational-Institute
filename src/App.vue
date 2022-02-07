@@ -1,11 +1,21 @@
 <script>
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+import Scroll from "@/components/Scroll.vue";
 export default {
     components:{
       Header,
       Footer,
+      Scroll,
     },
+    setup(){
+       
+      const top = ()=>{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      return {top,};
+    }
     
 }
 </script>
@@ -13,6 +23,7 @@ export default {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
   <Header />
   <router-view></router-view>
+  <Scroll :top="top" />
   <Footer />
 </template>
 
@@ -22,6 +33,7 @@ export default {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 section{
     padding: 50px 0;

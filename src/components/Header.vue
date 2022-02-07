@@ -18,7 +18,7 @@ export default {
         const nav = reactive([
             {name:'首頁',url:'/'},
             {name:'關於我們',url:'/about'},
-            {name:'課程規劃',url:'###'},
+            {name:'課程規劃',url:'/Course'},
             {name:'人才培育',url:'###'},
             {name:'場地租借',url:'###'},
             {name:'聯絡我們',url:'###'},

@@ -39,9 +39,12 @@ export default {
         </div>
         <div class="link">
             <h2>追蹤我們</h2>
-            <a href="###">Line</a>
-            <a href="###">Instagram</a>
-            <a href="###">Facebook</a>
+            <div>
+                <a href="https://www.facebook.com/icefinland/" class="icon"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/colorful.institute/" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://lin.ee/7TPK9Fd" class="icon"><i class="fab fa-line"></i></a>
+            </div>
+            <img src="@/assets/images/LINE.png" alt="" class="lineqrcode">
         </div>
     </div>
     <div class="copyright">
@@ -62,7 +65,8 @@ footer{
     .contact{
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: start;
+        padding-top: 50px;
         width:100%;
         height: 300px;
         @media screen and (max-width:850px){
@@ -101,10 +105,19 @@ footer{
         }
         .link{
             text-align: left;
-            a{
-                display: block;
+            .icon{
+                display: inline-block;
                 color:#fff;
-                margin: 3px 0;
+                margin: 0px 7px;
+                >i{
+                    font-size: 40px;
+                }
+            }
+            .lineqrcode{
+                width:133px;
+                margin:auto;
+                display: block;
+                margin-top: 12px;;
             }
         }
     }
