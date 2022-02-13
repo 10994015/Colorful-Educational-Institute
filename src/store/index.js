@@ -7,16 +7,26 @@ export default createStore({
     totop:()=>{
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    }
+    },
+    isSiteImg:false,
   },
   mutations: {
     handopenMenu(state){
       state.openMenu = !state.openMenu;
+    },
+    handLightbox(state, bool){
+      state.isSiteImg = bool;
+      
     }
+
   },
   actions: {
     handopenMenu(context){
       context.commit('handopenMenu');
+    },
+    handLightbox(context){
+      const bool = !context.state.isSiteImg;
+      context.commit('handLightbox', bool);
     }
     
   },
@@ -26,6 +36,9 @@ export default createStore({
     },
     totop(state){
       return state.totop;
+    },
+    isSiteImg(state){
+      return state.isSiteImg;
     }
   },
   modules: {

@@ -18,8 +18,8 @@ export default {
         <img src="@/assets/images/start.jpg" alt="">
         <div class="form">
             <input type="text" placeholder="姓名*" required>
-            <input type="text" placeholder="聯絡電話*" required>
             <input type="email" placeholder="信箱*" required>
+            <input type="text" placeholder="主旨*" required>
             <textarea name="" id="" cols="30" rows="10" placeholder="messages"></textarea>
             <button>確認送出</button>
         </div>
