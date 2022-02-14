@@ -99,6 +99,7 @@ export default {
         height: 100%;
         transform: translateX(0);
         transition: all .5s ease;
+        object-fit: cover;
         cursor: pointer;
       }
     } 
@@ -108,7 +109,7 @@ export default {
         left:-36px;
         font-size: 36px;
         cursor: pointer;
-        color:#1B4F7D;
+        color:rgba(27, 79, 125, .8);
       }
      .rightbtn{
         position: absolute;
@@ -116,7 +117,7 @@ export default {
         right:-36px;
         font-size: 36px;
         cursor: pointer;
-        color:#1B4F7D;
+        color:rgba(27, 79, 125, .8);
       }
   }
 }
