@@ -1,7 +1,40 @@
 <script>
-import {reactive} from "vue";
+import {reactive, ref} from "vue";
+import {useStore} from "vuex";
 export default {
     setup(){
+        const store = useStore();
+        const handLightbox = (e)=>{
+            store.dispatch('handLightbox', e.target.src);
+        }
+        const isJohn = ref(false);
+        const isJohnover = ()=>{
+            isJohn.value = true;
+        }
+        const isJohnout = ()=>{
+            isJohn.value = false;
+        }
+        const johnIdx = ref(0);
+        const handLeftClick = ()=>{
+            const jhonimg = document.getElementsByClassName('jhonimg');
+            johnIdx.value --;
+            if(johnIdx.value < 0 ){
+                johnIdx.value = jhonimg.length - 1 ;
+            }
+            for(let i=0;i<jhonimg.length;i++){
+                jhonimg[i].style.transform = `translateX(-${johnIdx.value}00%)`;
+            }
+        }
+        const handRightClick = ()=>{
+            const jhonimg = document.getElementsByClassName('jhonimg');
+            johnIdx.value ++;
+            if(johnIdx.value > jhonimg.length - 1 ){
+                johnIdx.value = 0;
+            }
+            for(let i=0;i<jhonimg.length;i++){
+                jhonimg[i].style.transform = `translateX(-${johnIdx.value}00%)`;
+            }
+        }
         const imgbox = reactive([
             {src:'https://lh6.googleusercontent.com/LxjyGXbYTcgFQ3iYAqMUZ4a7UVzK42qTT1kYtQKA1pNf-hKACUYWvEon9V0RzTT53BVMToGSArxfhcUG95hfDPBoCOt6CFv_Uq1QXRYJlCOepClrneBKtPssuCzTR2fgYQ=w1280'},
             {src:'https://www.ice-finland.club/styles/images/summer/da.jpg'},
@@ -9,21 +42,21 @@ export default {
             {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
             {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
         ])
-        return {imgbox};
+        return {imgbox, handLeftClick, handRightClick, handLightbox, isJohn, isJohnover, isJohnout};
     }
 }
 </script>
 <template>
   <div class="john">
-      <div class="left">
+      <div class="left" @mouseenter="isJohnover" @mouseleave="isJohnout">
           <div class="imgbox">
-              <img v-for="item in imgbox" :src="item.src" :key="item.src" alt="">
+              <img v-for="item in imgbox" :src="item.src" :key="item.src" alt="" class="jhonimg" @click="handLightbox($event)">
           </div>
           <Transition  name="fade">
-            <i class="fa-solid fa-circle-chevron-left leftbtn"></i>
+            <i class="fa-solid fa-circle-chevron-left leftbtn" @click="handLeftClick" v-show="isJohn"></i>
           </Transition >
           <Transition  name="fade">
-            <i class="fa-solid fa-circle-chevron-right rightbtn"></i>
+            <i class="fa-solid fa-circle-chevron-right rightbtn" @click="handRightClick" v-show="isJohn"></i>
           </Transition >
       </div>
       <div class="right">
@@ -53,6 +86,8 @@ export default {
                 height: 100%;
                 cursor: pointer;
                 object-fit: cover;
+                transform: translateX(0%);
+                transition: all .5s ease;
             }
         }
         .leftbtn{
@@ -79,5 +114,23 @@ export default {
         justify-content: center;
         align-items: flex-end;
     }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from{
+  opacity: 0;
+}
+.fade-enter-to{
+  opacity: .8;
+}
+.fade-leave-from {
+  opacity: .8;
+}
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

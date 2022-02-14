@@ -9,7 +9,7 @@ export default createStore({
       document.documentElement.scrollTop = 0;
     },
     isSiteImg:false,
-    lightboxsrc:'空字串',
+    lightboxsrc:'',
   },
   mutations: {
     handopenMenu(state){

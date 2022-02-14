@@ -41,7 +41,6 @@ export default {
       
       
     }
-    
     const imgbox = reactive([
       {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
       {src:'https://www.ice-finland.club/styles/images/summer/da.jpg'},
@@ -50,6 +49,7 @@ export default {
       {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
      
     ])
+    
    
     return {isbenfen, isbenfenover, isbenfenout, imgbox, handLeftFn, handRightFn, handLightbox};
   }
