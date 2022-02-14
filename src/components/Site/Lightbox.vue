@@ -9,12 +9,16 @@ export default {
        const isSiteImg = computed(()=>{
            return store.getters.isSiteImg;
        })
+       const imgsrc = computed(()=>{
+           return store.getters.lightboxsrc;
+       })
        const closeLightbox = ()=>{
            store.dispatch('handLightbox');
        }
         return {
             isSiteImg,
-            closeLightbox
+            closeLightbox,
+            imgsrc
             };
     }
 }
@@ -22,7 +26,7 @@ export default {
 <template>
 <div class="lightbox" v-if="isSiteImg">
     <div class="back" @click="closeLightbox"></div>
-    <img  src="https://www.ice-finland.club/styles/images/english/about.jpg" alt="">
+    <img  :src="imgsrc" alt="">
 </div>
 </template>
 

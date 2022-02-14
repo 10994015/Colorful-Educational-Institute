@@ -9,14 +9,15 @@ export default createStore({
       document.documentElement.scrollTop = 0;
     },
     isSiteImg:false,
+    lightboxsrc:'空字串',
   },
   mutations: {
     handopenMenu(state){
       state.openMenu = !state.openMenu;
     },
-    handLightbox(state, bool){
-      state.isSiteImg = bool;
-      
+    handLightbox(state, imgsrc){
+      state.isSiteImg = !state.isSiteImg;
+      state.lightboxsrc = imgsrc;
     }
 
   },
@@ -24,11 +25,10 @@ export default createStore({
     handopenMenu(context){
       context.commit('handopenMenu');
     },
-    handLightbox(context){
-      const bool = !context.state.isSiteImg;
-      context.commit('handLightbox', bool);
+    handLightbox(context,src){
+      let imgsrc = src;
+      context.commit('handLightbox', imgsrc);
     }
-    
   },
   getters:{
     openMenu(state){
@@ -39,6 +39,9 @@ export default createStore({
     },
     isSiteImg(state){
       return state.isSiteImg;
+    },
+    lightboxsrc(state){
+      return state.lightboxsrc;
     }
   },
   modules: {

@@ -4,8 +4,11 @@ import {useStore} from "vuex";
 export default {
   setup(){
     const store = useStore();
-    const handLightbox = ()=>{
-      store.dispatch('handLightbox');
+    const handLightbox = (e)=>{
+      // console.log(e.target.src);
+      let src = e.target.src;
+      
+      store.dispatch('handLightbox',src);
     }
     let imgIdx = ref(0);
     const isbenfen = ref(false);
@@ -41,9 +44,10 @@ export default {
     
     const imgbox = reactive([
       {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
-      {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
-      {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
-      {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
+      {src:'https://www.ice-finland.club/styles/images/summer/da.jpg'},
+      {src:'https://www.ice-finland.club/styles/images/summer/00.jpg'},
+      {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
+      {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
      
     ])
    
@@ -60,7 +64,7 @@ export default {
   
     <div class="right" @mouseenter="isbenfenover" @mouseleave="isbenfenout">
       <div class="imgbox">
-          <img :src="item.src" alt="" v-for="item in imgbox" :key="item.src" class="images" @click="handLightbox">
+          <img :src="item.src" alt="" v-for="item in imgbox" :key="item.src" class="images" @click="handLightbox($event)">
       </div>
       <Transition  name="fade">
         <i class="fa-solid fa-circle-chevron-left leftbtn" v-show="isbenfen" @click="handLeftFn"></i>
