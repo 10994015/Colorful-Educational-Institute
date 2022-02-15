@@ -19,7 +19,7 @@ export default {
             {name:'首頁',url:'/'},
             {name:'最新消息',url:'/Latestnews'},
             {name:'課程規劃',url:'/Course'},
-            {name:'人才培育',url:'###'},
+            {name:'人才培育',url:'/Nurture'},
             {name:'場地租借',url:'/Site'},
             {name:'聯絡我們',url:'/Contact'},
         ]);

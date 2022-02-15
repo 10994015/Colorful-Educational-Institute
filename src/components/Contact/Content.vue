@@ -15,7 +15,7 @@ export default {
                 <span>主旨</span>
                 <input type="text" required>
                 <span>你的訊息(選填)</span>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="" cols="30" rows="10" placeholder="報名課程、場地租借、進行培育..."></textarea>
                 <button type="submit">送出</button>
             </form>
         </div>

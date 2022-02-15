@@ -36,7 +36,7 @@ export default {
             }
         }
         const imgbox = reactive([
-            {src:'https://lh6.googleusercontent.com/LxjyGXbYTcgFQ3iYAqMUZ4a7UVzK42qTT1kYtQKA1pNf-hKACUYWvEon9V0RzTT53BVMToGSArxfhcUG95hfDPBoCOt6CFv_Uq1QXRYJlCOepClrneBKtPssuCzTR2fgYQ=w1280'},
+            {src:'https://lh4.googleusercontent.com/UwbCFKgp4Z1L56zV1PaKu2ttVbFGBMpQmNrN6CGU_OuU61-HeQngrGsquOtuIsfAu5NQv3dGYN66grj4NbU8NMxxpLMr4xrHlJjUslfteXZ4x9Tew4cJRVAnMC8rmwyZ2g=w1280'},
             {src:'https://www.ice-finland.club/styles/images/summer/da.jpg'},
             {src:'https://www.ice-finland.club/styles/images/summer/00.jpg'},
             {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
@@ -61,7 +61,10 @@ export default {
       </div>
       <div class="right">
           <h2>約翰小學</h2>
-          <p>位於新竹縣竹東市的約翰小學</p>
+          <p>地址：校本部 🚩 新竹縣竹北市勝利八街一段181號<br />
+          每周六 參觀日 10:00-16:30 (請先預約)<br />
+          預約電話：03-6581938, 0953-755677<br />
+            Email: service@johanschool.org</p>
       </div>
   </div>
 </template>
@@ -113,6 +116,9 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+        >p{
+            text-align: right;
+        }
     }
 }
 

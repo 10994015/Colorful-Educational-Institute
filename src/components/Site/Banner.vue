@@ -6,8 +6,8 @@ export default {
 <template>
   <div class="banner">
       <img src="@/assets/images/site.jpg" alt="">
-      <h2>場地租借</h2>
-      <p>我們與很多文教機構合作，並提供場地的租借使用</p>
+      <h2>想上課卻沒有場地嗎?</h2>
+      <p>我們眾多文教機構合作，並提供場地的租借使用，歡迎各大文教機構使用</p>
   </div>
 </template>
 <style lang="scss" scoped>

@@ -1,19 +1,23 @@
-
 <script>
+import Banner from "@/components/Course/Banner.vue";
 export default {
+  components:{
+    Banner,
+  },
+  setup(){
 
+    return {};
+  }
 }
 </script>
 <template>
-  <div>
-      <h1>課程規劃</h1>
-      <h1>課程規劃</h1>
-      <h1>課程規劃</h1>
-      <h1>課程規劃</h1>
-      <h1>課程規劃</h1>
-  </div>
+ <div id="course">
+   <Banner />
+ </div>
 </template>
 
-<style>
-
+<style lang="scss" scoped>
+#course {
+  width:100%;
+}
 </style>

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import NotFoundComponent from '../views/NotFoundComponent.vue'
 
 const routes = [
   {
@@ -40,6 +41,12 @@ const routes = [
     name:'Site',
     component:()=> import('../views/Site.vue')
   },
+  {
+    path:'/Nurture',
+    name:'Nurture',
+    component:()=> import('../views/Nurture.vue')
+  },
+  { path: '/:pathMatch(.*)', component: NotFoundComponent }
 ]
 
 const router = createRouter({

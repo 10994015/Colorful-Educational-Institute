@@ -50,7 +50,10 @@ export default {
   <div class="karl">
       <div class="left">
           <h2>卡爾中學</h2>
-          <p>位於新竹縣竹東鎮的卡爾中學</p>
+          <p>地址：校本部 🚩 新竹縣竹北市縣政二路596號<br />
+          每周六 參觀日 10:00-16:30 (請先預約)<br />
+          預約電話：03-558-9868<br />
+            Email: service@karlschool.org </p>
       </div>
       <div class="right" @mouseenter="isKarlover" @mouseleave="isKarlout">
           <div class="imgbox">
