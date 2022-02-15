@@ -1,8 +1,12 @@
 <script>
 import Banner from "@/components/Course/Banner.vue";
+import Intro from "@/components/Course/Intro.vue";
+import Camp from "@/components/Course/Camp.vue";
 export default {
   components:{
     Banner,
+    Intro,
+    Camp,
   },
   setup(){
 
@@ -13,7 +17,10 @@ export default {
 <template>
  <div id="course">
    <Banner />
+   <Intro />
+   <!-- <Camp /> -->
  </div>
+ 
 </template>
 
 <style lang="scss" scoped>
