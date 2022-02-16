@@ -9,13 +9,13 @@ export default {
       <div class="item">
           <img src="@/assets/images/a.jpg" alt="">
           <div class="text">
-              <h2>你的點子很棒，卻少了工程師？</h2>
+              <h2>標題標題標題標題標題標題</h2>
               <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
           </div>
       </div>
       <div class="item">
           <div class="text">
-              <h2>你的點子很棒，卻少了工程師？</h2>
+              <h2>標題標題標題標題標題標題</h2>
               <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
           </div>
           <img src="@/assets/images/a.jpg" alt="">
