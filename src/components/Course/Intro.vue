@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-    padding: 80px 0;
+    padding: 60px 0;
     width:80%;
     margin:auto;
     >h1 {
@@ -44,6 +44,16 @@ export default {
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 25px;
+        position: relative;
+        &::before{
+            content:'';
+            position: absolute;
+            top: 60px;
+            left:calc(50% - 50px);;
+            width:100px;
+            height: 2px;
+            background-color: #555;
+        }
     }
     > .content {
         display: grid;

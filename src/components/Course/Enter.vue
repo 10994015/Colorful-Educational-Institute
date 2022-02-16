@@ -28,13 +28,23 @@ export default {
     width:100%;
     height: auto;
     background-color: #1C1C1C;
-    padding: 80px 0;
+    padding: 60px 0;
     > h1 {
         text-align: center;
         color:#fff;
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 25px;
+        position: relative;
+        &::before{
+            content:'';
+            position: absolute;
+            top: 60px;
+            left:calc(50% - 50px);;
+            width:100px;
+            height: 2px;
+            background-color: #fff;
+        }
     }
     > .item{
         width:90%;
