@@ -2,11 +2,13 @@
 import Banner from "@/components/Course/Banner.vue";
 import Intro from "@/components/Course/Intro.vue";
 import Camp from "@/components/Course/Camp.vue";
+import Enter from "@/components/Course/Enter.vue";
 export default {
   components:{
     Banner,
     Intro,
     Camp,
+    Enter,
   },
   setup(){
 
@@ -18,6 +20,7 @@ export default {
  <div id="course">
    <Banner />
    <Intro />
+   <Enter />
    <!-- <Camp /> -->
  </div>
  

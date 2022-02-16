@@ -7,6 +7,9 @@ export default {
         const handLightbox = (e)=>{
             store.dispatch('handLightbox', e.target.src);
         }
+        const handOpenModule = (e)=>{
+            store.dispatch('handOpenModule',e.target.value);
+        }
         const isJohn = ref(false);
         const isJohnover = ()=>{
             isJohn.value = true;
@@ -42,7 +45,7 @@ export default {
             {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
             {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
         ])
-        return {imgbox, handLeftClick, handRightClick, handLightbox, isJohn, isJohnover, isJohnout};
+        return {imgbox, handLeftClick, handRightClick, handLightbox, isJohn, isJohnover, isJohnout, handOpenModule};
     }
 }
 </script>
@@ -65,6 +68,7 @@ export default {
           每周六 參觀日 10:00-16:30 (請先預約)<br />
           預約電話：03-6581938, 0953-755677<br />
             Email: service@johanschool.org</p>
+            <button value="約翰小學" @click="handOpenModule($event)">我要租借</button>
       </div>
   </div>
 </template>
@@ -118,6 +122,18 @@ export default {
         align-items: flex-end;
         >p{
             text-align: right;
+            margin-bottom: 20px;
+        }
+        > button {
+            width:180px;
+            height: 40px;
+            outline: none;
+            border:none;
+            font-size: 17px;
+            color:#333;
+            font-weight: 600;
+            background-color: rgba(255, 135, 110, 1);
+            cursor: pointer;
         }
     }
 }

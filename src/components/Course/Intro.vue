@@ -17,11 +17,11 @@ export default {
 </script>
 <template>
   <div class="intro">
-      <h1>我的服務</h1>
+      <h1>我們的服務</h1>
      <div class="content">
           <div class="grid" v-for="item in imgItem" :key="item.text">
             <div class="item">
-                <router-link to="/">
+                <router-link to="/Nurture">
                     <img :src="item.src" alt="">
                     <h2>{{item.title}}</h2>
                 </router-link>

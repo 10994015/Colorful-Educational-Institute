@@ -1,11 +1,18 @@
 <script>
-import {reactive, ref} from "vue";
+import {reactive, ref, watch} from "vue";
 import {useStore} from "vuex";
 export default {
     setup(){
         const store = useStore();
+        
+        // console.log("school=>" ,school);
+        
         const handLightbox = (e)=>{
             store.dispatch('handLightbox', e.target.src);
+        }
+        
+        const handOpenModule = (e)=>{
+            store.dispatch('handOpenModule', e.target.value);
         }
         const isKarl = ref(false);
         const isKarlover = () =>{
@@ -42,7 +49,7 @@ export default {
             {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
             {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
         ])
-        return {imgbox, handLightbox, isKarl, isKarlover, isKarlout, handLeftMethod, handRightMethod};
+        return {imgbox, handOpenModule, handLightbox, isKarl, isKarlover, isKarlout, handLeftMethod, handRightMethod};
     }
 }
 </script>
@@ -54,6 +61,7 @@ export default {
           每周六 參觀日 10:00-16:30 (請先預約)<br />
           預約電話：03-558-9868<br />
             Email: service@karlschool.org </p>
+            <button @click="handOpenModule($event)" value="卡爾中學">我要租借</button>
       </div>
       <div class="right" @mouseenter="isKarlover" @mouseleave="isKarlout">
           <div class="imgbox">
@@ -79,6 +87,21 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
+         > button {
+            width:180px;
+            height: 40px;
+            outline: none;
+            border:none;
+            font-size: 17px;
+            color:#333;
+            font-weight: 600;
+            background-color: rgba(255, 135, 110, 1);
+            cursor: pointer;
+        }
+        >p{
+            text-align: left;
+            margin-bottom: 20px;
+        }
     }
     >.right{
         width:500px;
