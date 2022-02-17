@@ -12,6 +12,8 @@ export default createStore({
     lightboxsrc:'',
     lendModule:false,
     isSchool:'',
+    isPhoto:false,
+    PhotoSrc:'',
   },
   mutations: {
     handopenMenu(state){
@@ -27,6 +29,10 @@ export default createStore({
       // console.log("val=>",school);
       
       state.lendModule = !state.lendModule;
+    },
+    handOpenPhoto(state, src){
+      state.photoSrc = src;
+      state.isPhoto = !state.isPhoto;
     }
 
   },
@@ -43,6 +49,10 @@ export default createStore({
       // console.log("newtext=>", text);
       
       context.commit('handOpenModule',school);
+    },
+    handOpenPhoto({commit}, src){
+      let photoSrc = src;
+      commit('handOpenPhoto', photoSrc);
     }
   },
   getters:{
@@ -63,6 +73,9 @@ export default createStore({
     },
     isSchool(state){
       return state.isSchool;
+    },
+    isPhoto(state){
+      return state.isPhoto;
     }
   },
   modules: {
