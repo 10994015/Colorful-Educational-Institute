@@ -6,6 +6,7 @@ export default {
 <template>
   <div class="entity">
       <h1>冰芬美語</h1>
+      <p>還有實體補習班</p>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -14,9 +15,9 @@ export default {
     background-color: #1C1C1C;
     height: 500px;
     padding: 60px 0;
+    color:#fff;
     > h1 {
         text-align: center;
-        color:#fff;
         font-size: 36px;
         font-weight: 500;
         margin-bottom: 25px;

@@ -5,6 +5,7 @@ import Camp from "@/components/Course/Camp.vue";
 import Enter from "@/components/Course/Enter.vue";
 import Online from "@/components/Course/Online.vue";
 import Entity from "@/components/Course/Entity.vue";
+import Study from "@/components/Course/Study.vue";
 export default {
   components:{
     Banner,
@@ -13,6 +14,7 @@ export default {
     Enter,
     Online,
     Entity,
+    Study,
   },
   setup(){
 
@@ -27,6 +29,7 @@ export default {
    <Enter />
    <Online />
    <Entity />
+   <Study />
    <!-- <Camp /> -->
  </div>
  
