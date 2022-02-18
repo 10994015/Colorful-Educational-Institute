@@ -27,7 +27,6 @@ export default {
    <section id="nurture">
             <h1>{{props.title[1].title}}</h1>
             <div class="content">
-                
                 <div class="step">
                     <div class="stepItem" v-for="item in stepItem" :key="item.text">
                         <div>
@@ -36,8 +35,8 @@ export default {
                         </div>
                         <i class="fas fa-long-arrow-alt-right" v-show="item.rightopen"></i>
                    </div>
-                   
                 </div>
+                
                 <div class="contentText">
                     <h2>專業派師</h2>
                     <p>{{props.lorem}}</p>

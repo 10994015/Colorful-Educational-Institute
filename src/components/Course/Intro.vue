@@ -4,12 +4,12 @@ import {reactive } from "vue";
 export default {
     setup(){
         const imgItem = reactive([
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"冬令營",text:"test1"},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"夏令營",text:"test2"},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"實體課程",text:"test4"},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"線上直播課程",text:"test3"},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"線上預錄課程",text:"test3"},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"遊留學",text:"test5"},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"冬令營",text:"test1", to:'/Course/Winter'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"夏令營",text:"test2", to:'/Course/Summer'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"實體課程",text:"test4", to:'/Course/Entity'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"線上直播課程",text:"test3", to:'/Course/Live'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"線上預錄課程",text:"test3", to:'/Course/Prepare'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"遊留學",text:"test5", to:'/Course/Study'},
         ])
         return {imgItem};
     }
@@ -21,7 +21,7 @@ export default {
      <div class="content">
           <div class="grid" v-for="item in imgItem" :key="item.text">
             <div class="item">
-                <router-link to="/Nurture">
+                <router-link :to="item.to">
                     <img :src="item.src" alt="">
                     <h2>{{item.title}}</h2>
                 </router-link>

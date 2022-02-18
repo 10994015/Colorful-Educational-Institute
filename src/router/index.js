@@ -25,6 +25,36 @@ const routes = [
     component:()=> import('../views/Course.vue')
   },
   {
+    path:'/Course/Winter',
+    name:'Winter',
+    component:()=> import('../views/Course/Winter.vue')
+  },
+  {
+    path:'/Course/Summer',
+    name:'Summer',
+    component:()=> import('../views/Course/Summer.vue')
+  },
+  {
+    path:'/Course/Entity',
+    name:'Entity',
+    component:()=> import('../views/Course/Entity.vue')
+  },
+  {
+    path:'/Course/Live',
+    name:'Live',
+    component:()=> import('../views/Course/Live.vue')
+  },
+  {
+    path:'/Course/Prepare',
+    name:'Prepare',
+    component:()=> import('../views/Course/Prepare.vue')
+  },
+  {
+    path:'/Course/Study',
+    name:'Study',
+    component:()=> import('../views/Course/Study.vue')
+  },
+  {
     path:'/Latestnews',
     name:'Latestnews',
     component:()=> import('../views/Latestnews.vue')
