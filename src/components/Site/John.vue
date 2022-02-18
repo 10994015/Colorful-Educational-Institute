@@ -39,7 +39,7 @@ export default {
             }
         }
         const imgbox = reactive([
-            {src:'https://lh4.googleusercontent.com/UwbCFKgp4Z1L56zV1PaKu2ttVbFGBMpQmNrN6CGU_OuU61-HeQngrGsquOtuIsfAu5NQv3dGYN66grj4NbU8NMxxpLMr4xrHlJjUslfteXZ4x9Tew4cJRVAnMC8rmwyZ2g=w1280'},
+            {src:'https://10994015.github.io/images/images/b.jpg'},
             {src:'https://www.ice-finland.club/styles/images/summer/da.jpg'},
             {src:'https://www.ice-finland.club/styles/images/summer/00.jpg'},
             {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
