@@ -23,8 +23,27 @@ export default {
             <i class="fas fa-long-arrow-alt-right" v-show="item.rightopen"></i>
         </div>
     </div>
+    <div class="text">
+        <h2>專業派師</h2>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos tenetur amet ipsa quisquam, nisi sit at nobis quam voluptatem, id eveniet atque culpa obcaecati praesentium deserunt aut aliquid. Quasi!</p>
+    </div>
 </template>
 <style lang="scss" scoped>
+.text{
+    width:500px;
+    margin:auto;
+    font-size: 18px;
+    color:#222;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+    >h2{
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color:#222;
+    }
+}
 .step{
     display: flex;
     justify-content: center;
