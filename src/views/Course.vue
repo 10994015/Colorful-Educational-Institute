@@ -6,6 +6,7 @@ import Enter from "@/components/Course/Enter.vue";
 import Online from "@/components/Course/Online.vue";
 import Entity from "@/components/Course/Entity.vue";
 import Study from "@/components/Course/Study.vue";
+import Contact from "@/components/Course/Contact.vue";
 import Photo from "@/components/Course/Photo.vue";
 export default {
   components:{
@@ -16,6 +17,7 @@ export default {
     Online,
     Entity,
     Study,
+    Contact,
     Photo,
   },
   setup(){
@@ -32,6 +34,7 @@ export default {
    <Online />
    <Entity />
    <Study />
+   <Contact />
    <Photo />
    <!-- <Camp /> -->
  </div>
