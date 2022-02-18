@@ -1,5 +1,5 @@
 <script>
-import {reactive} from "vue";
+import {reactive, ref} from "vue";
 export default {
     setup(){
         const stepItem = reactive([
@@ -9,7 +9,8 @@ export default {
             {class:'fas fa-stamp',text:'取得證明',rightopen:true},
             {class:'fas fa-chalkboard-teacher',text:'成為專業教師',rightopen:false},
         ]);
-        return {stepItem};
+        const lorem = ref('Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sapiente sequi rem maxime aliquid quod adipisci odit! Iusto, doloribus. Quo sed ratione dolorum dolores amet hic harum, eius aperiam aut. Odit eaque inventore quae molestiae unde et quis numquam natus harum, voluptas ipsum quibusdam necessitatibus, deserunt modi consectetur sequi ut nulla mollitia. Laboriosam, sapiente quisquam incidunt quam quod laborum animi.')
+        return {stepItem, lorem};
     }
 }
 </script>
@@ -25,7 +26,7 @@ export default {
     </div>
     <div class="text">
         <h2>專業派師</h2>
-        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos tenetur amet ipsa quisquam, nisi sit at nobis quam voluptatem, id eveniet atque culpa obcaecati praesentium deserunt aut aliquid. Quasi!</p>
+        <p >{{lorem}}</p>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -42,6 +43,9 @@ export default {
         font-weight: 500;
         margin-bottom: 20px;
         color:#222;
+    }
+    > p{
+        color:#555;
     }
 }
 .step{
