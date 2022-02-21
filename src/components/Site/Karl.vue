@@ -98,7 +98,7 @@ export default {
         }
         @media screen and (max-width:600px){
         width:90%;
-    }
+        }
          > button {
             width:180px;
             height: 40px;

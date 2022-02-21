@@ -10,6 +10,9 @@ export default {
       
       store.dispatch('handLightbox',src);
     }
+    const handOpenModule = (e)=>{
+        store.dispatch('handOpenModule', e.target.value);
+    }
     let imgIdx = ref(0);
     const isbenfen = ref(false);
     const isbenfenover = ()=>{
@@ -51,16 +54,20 @@ export default {
     ])
     
    
-    return {isbenfen, isbenfenover, isbenfenout, imgbox, handLeftFn, handRightFn, handLightbox};
+    return {isbenfen, handOpenModule, isbenfenover, isbenfenout, imgbox, handLeftFn, handRightFn, handLightbox};
   }
 }
 </script>
 <template>
   <div class="benfen">
     <div class="left">
-      <h2>冰芬文教</h2>
-      <p>位於新竹縣竹東市的冰芬文教</p>
-    </div>
+          <h2>冰芬美語</h2>
+          <p>地址：校本部 🚩 新竹縣竹北市縣政二路596號<br />
+          每周六 參觀日 10:00-16:30 (請先預約)<br />
+          預約電話：03-558-9868<br />
+            Email: service@karlschool.org </p>
+            <button @click="handOpenModule($event)" value="冰芬美語">我要租借</button>
+      </div>
   
     <div class="right" @mouseenter="isbenfenover" @mouseleave="isbenfenout">
       <div class="imgbox">
@@ -83,33 +90,21 @@ export default {
    @media screen and (max-width:768px){
         flex-direction: column-reverse;
     }
-  > .left {
-    width:500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media screen and (max-width:1024px){
-        width:450px;
-    }
-    @media screen and (max-width:768px){
-        margin: 20px auto;
-    }
-    @media screen and (max-width:600px){
-        width:90%;
-    }
-    >h2 {
-          @media screen and (max-width:1024px){
-              padding:0 15px;
-          }
-      }
-              >p{
-            text-align: right;
-            margin-bottom: 20px;
-            @media screen and (max-width:1024px){
-                padding:0 15px;
-            }
+  >.left {
+        width:500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+         @media screen and (max-width:1024px){
+            width:450px;
         }
-        > button {
+        @media screen and (max-width:768px){
+            margin: 20px auto;
+        }
+        @media screen and (max-width:600px){
+        width:90%;
+        }
+         > button {
             width:180px;
             height: 40px;
             outline: none;
@@ -120,7 +115,19 @@ export default {
             background-color: rgba(255, 135, 110, 1);
             cursor: pointer;
         }
-  }
+       >h2 {
+            @media screen and (max-width:1024px){
+                padding:0 15px;
+            }
+        }
+        >p{
+            text-align: left;
+            margin-bottom: 20px;
+            @media screen and (max-width:1024px){
+                padding:0 15px;
+            }
+        }
+    }
   > .right {
     width:500px;
     position: relative;
