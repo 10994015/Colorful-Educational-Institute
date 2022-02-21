@@ -49,6 +49,7 @@ export default {
         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         margin:auto;
         border-radius: 6px;
+        font-weight: 600;
         &:hover{
             transform: scale(1.1);
             transition: .5s;

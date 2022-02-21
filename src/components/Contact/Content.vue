@@ -26,14 +26,21 @@ export default {
         width:100%;
         padding-bottom: 100px;
         background-color: #F4F4F4;
+        @media screen and (max-width:768px){
+            padding-top: 350px;
+        }
         > form {
             box-shadow: 0 5px 25px #aaa;
             display: flex;
             flex-direction: column;
             max-width:1200px;
+            width:90%;
             background-color: #fff;
             margin:auto;
             padding:20px 50px;
+            @media screen and (max-width:414px){
+                padding:20px 25px;
+            }
             > h2{
                 text-align: center;
                 color:#333;

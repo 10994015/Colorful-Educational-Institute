@@ -60,12 +60,22 @@ export default {
         grid-template-columns: repeat(3,300px);
         grid-gap: 20px;
         justify-content: space-evenly;
+        @media screen and (max-width:1024px){
+            grid-template-columns: repeat(3,200px);
+        }
+        @media screen and (max-width:768px){
+            grid-template-columns: repeat(2,300px);
+            grid-gap: 25px;
+        }
+        @media screen and (max-width:650px){
+            grid-template-columns: repeat(1,90%);
+        }
             > .grid{
-            width:300px;
+            width:100%;
             height: 300px;
             margin-bottom: 25px;
             > .item {
-                width:300px;
+                width:100%;
                 height: 400px;
                 margin: 20px 0;
                 > a{

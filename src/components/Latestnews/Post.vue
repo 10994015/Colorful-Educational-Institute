@@ -51,6 +51,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (max-width:1024px) {
+            width:80%;
+        }
         > input{
             width:95%;
             height: 40px;
@@ -80,21 +83,43 @@ export default {
     > .post{
         width:60%;
         margin: auto;
+        @media screen and (max-width:1024px){
+            width:80%;
+        }
+        @media screen and (max-width:500px){
+            width:90%;
+        }
         .post-item{
             display: flex;
             border-bottom: 1px #ccc solid;
             padding:15px 0;
-
+            @media screen and (max-width:1024px){
+                flex-direction: column;
+                width:90%;
+                margin: auto;
+            }
             >img{
                 width:350px;
                 height: 210px;
                 object-fit: cover;
                 margin-right: 25px;
+                @media screen and (max-width:1024px){
+                    width:100%;
+                    margin-right: 0px;
+                }
+            }
+            @media screen and (max-width:1024px){
+                width:90%;
             }
             > .content{
                 width:500px;
                 padding: 8px;
                 position: relative;
+                @media screen and (max-width:1024px){
+                    width:90%;
+                    padding-bottom: 80px; 
+                    margin: auto;
+                }
                 >p{
                     color:#777;
                     font-size: 14px;

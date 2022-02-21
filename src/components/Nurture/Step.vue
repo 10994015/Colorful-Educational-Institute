@@ -38,6 +38,9 @@ export default {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     text-align: center;
     margin-bottom: 50px;
+    @media screen and (max-width:768px){
+        width:90%;
+    }
     >h2{
         text-align: center;
         font-weight: 500;
@@ -46,6 +49,8 @@ export default {
     }
     > p{
         color:#555;
+        width:90%;
+        margin:auto;
     }
 }
 .step{

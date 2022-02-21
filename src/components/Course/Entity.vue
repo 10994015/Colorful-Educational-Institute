@@ -100,6 +100,9 @@ export default {
             justify-content: center;
             align-items: center;
             margin: 30px 0;
+            @media screen and (max-width:768px){
+                flex-direction: column;
+            }
             > .text {
                 margin:0 25px;
                 > h2{
@@ -115,6 +118,10 @@ export default {
             > img {
                 width:50%;
                 margin:0 25px;
+                @media screen and (max-width:768px){
+                    width:80%;
+                    margin-top: 30px;
+                }
             }
         }
         > .center{
@@ -124,11 +131,13 @@ export default {
             flex-direction: column;
             width:80%;
             margin:30px 0;
+            @media screen and (max-width:520px){
+                width:90%;
+            }
             > iframe{
                 width:100%;
                 height: 300px;
                 margin:25px auto;
-
             }
             > .text {
                 margin:30px 0;
@@ -154,6 +163,20 @@ export default {
                     grid-column-gap: 30px;
                     grid-row-gap: 30px;
                     justify-content: center;
+                    @media screen and (max-width:1024px){
+                        grid-template-columns: 200px 200px 200px;
+                        grid-template-rows: 200px 200px 200px;
+                    }
+                    @media screen and (max-width:768px){
+                        grid-template-columns: 250px 250px ;
+                        grid-template-rows: 250px 250px 250px 250px;
+                    }
+                    @media screen and (max-width:520px){
+                        grid-template-columns: 90% ;
+                        grid-template-rows: repeat(9,300px);
+                        grid-row-gap: 100px;
+                        margin-bottom: 50px;
+                    }
                 >img {
                     width:100%;
                     cursor: pointer;

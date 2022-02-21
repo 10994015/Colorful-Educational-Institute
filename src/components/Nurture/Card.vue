@@ -28,6 +28,10 @@ export default {
     padding-top: 8em;
     padding-bottom: 50px;
     justify-content: center;
+    @media screen and (max-width:768px){
+      flex-direction: column;
+      align-items: center;
+    }
     > .card{
       width:300px;
       height: 350px;
@@ -42,6 +46,17 @@ export default {
       transition: all .5s ease;
       margin:20px 25px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      @media screen and (max-width: 1024px){
+        width:280px;
+      }
+      @media screen and (max-width:768px){
+        width:350px;
+        height: 400px;
+      }
+       @media screen and (max-width:414px){
+          width:90%;
+          height: 400px;
+        }
       &:hover{
         transform: translateY(-10px);
         transition: all .5s ease;

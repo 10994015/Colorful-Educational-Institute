@@ -58,18 +58,23 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width:768px){
+      flex-direction: column;
+    }
     >.item{
       width:350px;
       height: 250px;
       position: relative;
       margin:25px;
+      @media screen and (max-width:768px){
+        margin:10px;
+        width:100%;
+      }
       >img{
         width:100%;
         height: 100%;
         object-fit: cover;
         -webkit-filter:brightness(.8);
-
-        
       }
       > p {
         position: absolute;

@@ -9,13 +9,13 @@ export default {
       <div class="item">
           <img src="@/assets/images/a.jpg" alt="">
           <div class="text">
-              <h2>標題標題標題標題標題標題</h2>
+              <h2>這是標題這是標題這是標題</h2>
               <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
           </div>
       </div>
-      <div class="item">
+      <div class="item item-reverse">
           <div class="text">
-              <h2>標題標題標題標題標題標題</h2>
+              <h2>這是標題</h2>
               <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
           </div>
           <img src="@/assets/images/a.jpg" alt="">
@@ -29,6 +29,10 @@ export default {
     height: auto;
     background-color: #1C1C1C;
     padding: 60px 0;
+    @media screen and (max-width:768px){
+        padding: 60px 0;
+        min-height: 1000px;
+    }
     > h1 {
         text-align: center;
         color:#fff;
@@ -36,6 +40,9 @@ export default {
         font-weight: 500;
         margin-bottom: 25px;
         position: relative;
+        @media screen and (max-width:768px){
+            margin-bottom: 200px;
+        }
         &::before{
             content:'';
             position: absolute;
@@ -52,11 +59,24 @@ export default {
         display: flex;
         height: 200px;
         justify-content: center;
+        @media screen and (max-width:768px){
+            flex-direction: column;
+            height: auto;
+            width:95%;
+        }
+        &.item-reverse{
+            @media screen and (max-width:768px){
+                flex-direction: column-reverse;
+            }
+        }
         > img{
             width:300px;
             height: 100%;
             object-fit: cover;
             margin:30px 10px;
+            @media screen and (max-width:768px){
+                width:90%;
+            }
         }
         > .text{
             width:600px;
@@ -64,6 +84,10 @@ export default {
             margin:30px 10px;
             background-color: #fff;
             padding: 15px;
+            @media screen and (max-width:768px){
+                width:95%;
+                height: auto;
+            }
             h2{
                 font-size: 24px;
                 font-weight: 500;
@@ -73,6 +97,9 @@ export default {
             > p {
                 width:320px;
                 margin-top: 10px;
+                @media screen and (max-width:380px){
+                    width:90%;
+                }
             }
         }
     }

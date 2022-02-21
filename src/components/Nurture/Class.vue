@@ -47,6 +47,17 @@ export default {
       align-items: center;
       grid-column-gap:80px;
       grid-row-gap: 30px;
+      @media screen and (max-width:768px){
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 150px 150px;
+      }
+      @media screen and (max-width:650px){
+        grid-template-columns: 150px 150px ;
+        grid-template-rows: 150px 150px 150px;
+      }
+      @media screen and (max-width:500px){
+        grid-column-gap:35px;
+      }
     >.box{
         display: flex;
         flex-direction: column;
@@ -56,13 +67,23 @@ export default {
         border-radius: 50%;
         width:180px;
         height: 180px;
+        @media screen and (max-width:768px){
+          width:150px;
+          height: 150px;
+        }
         > i{
           color:#FF6662;
           font-size: 60px;
+           @media screen and (max-width:768px){
+            font-size: 50px;
+          }
         }
         > h3{
           font-size: 22px;
           color:#000;
+          @media screen and (max-width:768px){
+            font-size: 20px;
+          }
         }
       }
   }

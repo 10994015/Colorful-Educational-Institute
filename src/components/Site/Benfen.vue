@@ -79,21 +79,72 @@ export default {
 .benfen{
   display: flex;
   justify-content: center;
-  padding: 30px 0;
+  padding: 30px 25px;
+   @media screen and (max-width:768px){
+        flex-direction: column-reverse;
+    }
   > .left {
     width:500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media screen and (max-width:1024px){
+        width:450px;
+    }
+    @media screen and (max-width:768px){
+        margin: 20px auto;
+    }
+    @media screen and (max-width:600px){
+        width:90%;
+    }
+    >h2 {
+          @media screen and (max-width:1024px){
+              padding:0 15px;
+          }
+      }
+              >p{
+            text-align: right;
+            margin-bottom: 20px;
+            @media screen and (max-width:1024px){
+                padding:0 15px;
+            }
+        }
+        > button {
+            width:180px;
+            height: 40px;
+            outline: none;
+            border:none;
+            font-size: 17px;
+            color:#333;
+            font-weight: 600;
+            background-color: rgba(255, 135, 110, 1);
+            cursor: pointer;
+        }
   }
   > .right {
     width:500px;
     position: relative;
+     @media screen and (max-width:1024px){
+          width:450px;
+      }
+      @media screen and (max-width:768px){
+          margin: 20px auto;
+      }
+      @media screen and (max-width:600px){
+          width:90%;
+      }
     >.imgbox{
       width:500px;
       height: 350px;
       display: flex;
       overflow: hidden;
+      @media screen and (max-width:1024px){
+          width:100%;
+      }
+      @media screen and (max-width:600px){
+          width:95%;
+          height: 300px;
+      }
       > img{
         min-width:100%;
         height: 100%;

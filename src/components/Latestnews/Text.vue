@@ -35,11 +35,17 @@ export default {
     margin:auto;
     padding-top: 8em;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    @media screen and (max-width:1024px){
+        width:80%;
+    }
     > img{
         width:100%;
         margin:25px auto;
         height: 450px;
         object-fit: cover;
+         @media screen and (max-width:550px){
+            height: 300px;
+        }
     }
     > h1{
         font-size: 21px;
@@ -52,6 +58,9 @@ export default {
         width:100%;
         color:#666;
         margin:25px auto;
+        @media screen and (max-width:1024px){
+            margin:25px auto 75px;
+        }
     }
 }
 </style>

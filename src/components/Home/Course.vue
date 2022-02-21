@@ -23,7 +23,9 @@ export default {
                 <div class="contentText">
                     <h2>實現孩子的夢想</h2>
                     <p>{{props.lorem}}</p>
+                    <router-link to="/Course">SEE MORE</router-link>
                 </div>
+                
             </div>
             
         </section>
@@ -71,6 +73,23 @@ export default {
                 @media screen and (max-width:500px){
                     width:95%;
                     margin:10px auto;
+                }
+            }
+            a{
+                display: block;
+                width: 150px;
+                height: 50px;
+                background-color: #EEC71C;
+                color: #fff;
+                text-align: center;
+                line-height: 50px;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                border-radius: 6px;
+                margin-top: 20px;
+                font-weight: 600;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: .5s;
                 }
             }
         }

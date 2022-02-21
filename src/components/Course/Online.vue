@@ -68,14 +68,25 @@ export default {
         background-color: #fff;
         display: flex;
         justify-content: center;
+        @media screen and (max-width:450px){
+            flex-direction: column;
+        }
         >.line{
             width:1px;
             height: 300px;
             background-color: #333;
             margin:0 20px;
+            @media screen and (max-width:450px){
+                width:90%;
+                margin:20px auto;
+                height: 2px;
+            }
         }
         > .live{
             width:50%;
+            @media screen and (max-width:450px){
+                width:100%;
+            }
             > h2{
                 text-align: center;
                 font-weight: 500;
@@ -97,6 +108,9 @@ export default {
         }
         > .prepare{
             width:50%;
+            @media screen and (max-width:450px){
+                width:100%;
+            }
             > h2{
                 text-align: center;
                 font-size: 26px;

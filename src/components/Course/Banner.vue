@@ -30,6 +30,10 @@ export default {
         background-color: #333;
         padding:25px;
         border-radius: 8px;
+        @media screen and (max-width:768px){
+            left:50px;
+            width:250px;
+        }
         > h2{
             text-shadow: 0.1em 0.1em 0.2em #000;
             font-size: 40px;

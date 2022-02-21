@@ -57,7 +57,20 @@ export default {
         z-index: 9999999999999999999999999999999;
         transform: scale(1);
         animation: openImg .2s linear;
+        @media screen and (max-width:850px){
+        width:600px;
+        height:500px;
     }
+    @media screen and (max-width:768px){
+        width:85%;
+        height: 450px;
+    }
+    @media screen and (max-width:600px){
+        width:85%;
+        height: 350px;
+    }
+    }
+    
 }
 @keyframes openImg {
     0%{

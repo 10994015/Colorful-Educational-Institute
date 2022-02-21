@@ -77,17 +77,36 @@ export default {
 .john{
     display: flex;
     justify-content: center;
-    padding:30px 0;
+    padding: 30px 25px;
     background-color: #2B2C32;
     color:#fff;
+    @media screen and (max-width:768px){
+        flex-direction: column;
+    }
     > .left{
         width:500px;
         position: relative;
+        @media screen and (max-width:1024px){
+            width:450px;
+        }
+        @media screen and (max-width:768px){
+            margin: 20px auto;
+        }
+        @media screen and (max-width:600px){
+          width:90%;
+      }
         > .imgbox {
             width:500px;
             height: 350px;
             display: flex;
             overflow: hidden;
+            @media screen and (max-width:1024px){
+                width:100%;
+            }
+            @media screen and (max-width:600px){
+                width:95%;
+                height: 300px;
+            }
             > img {
                 min-width:100%;
                 height: 100%;
@@ -120,9 +139,26 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+         @media screen and (max-width:1024px){
+            width:450px;
+        }
+        @media screen and (max-width:768px){
+            margin: 20px auto;
+        }
+        @media screen and (max-width:600px){
+            width:90%;
+        }
+        >h2 {
+            @media screen and (max-width:1024px){
+                padding:0 15px;
+            }
+        }
         >p{
             text-align: right;
             margin-bottom: 20px;
+            @media screen and (max-width:1024px){
+                padding:0 15px;
+            }
         }
         > button {
             width:180px;

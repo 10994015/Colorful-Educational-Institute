@@ -44,6 +44,10 @@ export default {
             top: 450px;
             left:0;
             background-color: transparent;
+            @media screen and (max-width:768px){
+                flex-direction: column;
+                align-items: center;
+            }
             .item{
                 width:500px;
                 height: 300px;
@@ -55,6 +59,13 @@ export default {
                 align-items: center;
                 padding:40px 20px 30px;
                 font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                @media screen and (max-width:1024px){
+                    margin:0 20px;
+                }
+                @media screen and (max-width:768px){
+                    margin:10px 0;
+                    width:90%;
+                }
                 > i{
                     color:#333;
                     font-size: 50px;
