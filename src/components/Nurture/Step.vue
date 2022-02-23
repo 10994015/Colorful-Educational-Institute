@@ -5,7 +5,7 @@ export default {
         const stepItem = reactive([
             {class:'fas fa-user-graduate',text:'大學以上學歷',rightopen:true},
             {class:'fas fa-glasses',text:'參加培訓課程',rightopen:true},
-            {class:'far fa-building',text:'參加見習',rightopen:true},
+            {class:'far fa-building',text:'參加見習活動',rightopen:true},
             {class:'fas fa-stamp',text:'取得證明',rightopen:true},
             {class:'fas fa-chalkboard-teacher',text:'成為專業教師',rightopen:false},
         ]);
@@ -24,10 +24,11 @@ export default {
             <i class="fas fa-long-arrow-alt-right" v-show="item.rightopen"></i>
         </div>
     </div>
-    <div class="text">
+    <!-- 開會中說先拿掉 -->
+    <!-- <div class="text">
         <h2>專業派師</h2>
         <p >{{lorem}}</p>
-    </div>
+    </div> -->
 </template>
 <style lang="scss" scoped>
 .text{
