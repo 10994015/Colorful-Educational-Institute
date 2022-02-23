@@ -46,14 +46,14 @@ export default {
                   <input type="email" required>
               </label>
               <label for="">
-                  <p>租借時間(必填)</p>
+                  <p>租借時間</p>
                   <div class="date">
-                      <input type="date" required><span>至</span><input type="date" required>
+                      <input type="date"><span>至</span><input type="date">
                   </div>
               </label>
               <label for="">
-                  <p>租借用途(必填)</p>
-                  <textarea name="" placeholder="請簡短描述" id="" cols="20" rows="10" required></textarea>
+                  <p>租借用途</p>
+                  <textarea name="" placeholder="請簡短描述" id="" cols="20" rows="10"></textarea>
               </label>
               <button>租借</button>
           </form>
