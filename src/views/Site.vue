@@ -13,7 +13,6 @@ export default {
         Karl,
         Lightbox,
         Module,
-        
     }
 }
 </script>

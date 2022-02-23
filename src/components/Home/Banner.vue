@@ -19,8 +19,8 @@ export default {
             <i class="fas fa-chevron-circle-right" @click="rightimg"></i> -->
             <span>以互動參與感為原則，透過多元教學經驗<br>
                 讓學習更多 "冰芬" 色彩</span>
-            <a href="###" class="start">立即開始</a>
-            <a href="###" class="imgslide" v-for="item in imglist" :key="item.url">
+            <a href="javascript:;" class="start">立即開始</a>
+            <a href="javascript:;" class="imgslide" v-for="item in imglist" :key="item.url">
                 <img src="@/assets/images/banner.jpg" alt="">
             </a>
             <!-- <div ref="dot" id="dots" v-html="dotsHtml"></div> -->

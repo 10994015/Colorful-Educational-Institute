@@ -15,6 +15,7 @@ export default {
     width:100%;
     height: 600px;
     position: relative;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     > img{
         width:100%;
         height: 100%;
@@ -28,6 +29,12 @@ export default {
         font-weight: 600;
         font-size: 48px;
         text-shadow: 0px 2px 5px #000;
+        @media screen and (max-width:1024px){
+            left:100px;
+        }
+        @media screen and (max-width:700px){
+            left:50px;
+        }
     }
     > p {
         position: absolute;
@@ -37,6 +44,15 @@ export default {
         font-weight: 600;
         font-size: 20px;
         text-shadow: 0px 2px 5px #000;
+        @media screen and (max-width:1024px){
+            left:100px;
+        }
+        @media screen and (max-width:700px){
+            left:50px;
+        }
+        @media screen and (max-width:500px){
+            top:400px;
+        }
     }
 }
 </style>

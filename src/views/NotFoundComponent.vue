@@ -2,6 +2,8 @@
 <script>
 import {useRouter} from "vue-router";
 export default {
+    components:{
+    },
     setup(){
         const router = useRouter();
         const gotoPage = ()=>{

@@ -1,7 +1,8 @@
 
 <script>
-import {reactive, ref, computed} from "vue";
+import {reactive, ref, computed, onMounted} from "vue";
 import {useStore} from "vuex";
+import {useRouter} from "vue-router";
 import Menu from "@/components/Menu.vue";
 export default {
     components:{
@@ -10,7 +11,7 @@ export default {
     ,
     setup(){
         const store = useStore();
-
+        const router = useRouter();
         // console.log(store.getters.openMenu);
         const openMenu = computed(()=>{
             return store.getters.openMenu;
@@ -23,11 +24,29 @@ export default {
             {name:'場地租借',url:'/Site'},
             {name:'聯絡我們',url:'/Contact'},
         ]);
-
-        const handopenMenu = ()=>{
-            openMenu.value = !openMenu.value;
+        // onMounted(()=>{
+        //     const link = document.querySelectorAll('.link');
+        //     const navigation = document.getElementsByClassName('navigation')[0];
+        //     link.forEach((item)=>{
+        //         item.addEventListener('click', (e)=>{
+        //             // navigation.classList.remove('open');
+        //             openMenu.value = false;
+        //             console.log(openMenu.value);
+                    
+        //         })
+        //     })
+        // })
+        
+        const gotoNewpage = (page)=>{
+            // openMenu.value = !openMenu.value;
+            store.dispatch('handopenMenu');
+            router.push(page);
         }
-        return {nav, openMenu, handopenMenu};
+        const handopenMenu = ()=>{
+            store.dispatch('handopenMenu');
+            // openMenu.value = !openMenu.value;
+        }
+        return {nav, openMenu, handopenMenu,gotoNewpage};
     }
 }
 </script>
@@ -36,8 +55,8 @@ export default {
     <header id="header">
         <router-link to="/" id="logo"></router-link>
         <!-- <i class="fas fa-bars" :class="{open:openMenu}" id="menu" @click="handopenMenu"></i> -->
-        <ul :class="{open:openMenu}">
-            <li v-for="item in nav" :key="item.name"><router-link :to="item.url">{{item.name}}</router-link></li>
+        <ul :class="['navigation', {open:openMenu}]">
+            <li v-for="item in nav" :key="item.name"><a class="link" @click="gotoNewpage(item.url)">{{item.name}}</a></li>
         </ul>
     <Menu />
     </header>
@@ -99,6 +118,7 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
                 &:hover{
                     background-color: #F1F1F1;
                     border-bottom: 10px #1484c4 solid;
