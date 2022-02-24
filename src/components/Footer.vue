@@ -22,7 +22,8 @@ export default {
             <p>客服中心:<br>colorful@gmail.com</p>
             <p>地址:<br>新竹市東區光復路一段271號3樓</p>
             <p>企業合作:
-                cuclass
+                <!-- cuclass -->
+                清大Stem Shcool
                 卡爾中學
                 約翰小學
                 憶旺智慧
