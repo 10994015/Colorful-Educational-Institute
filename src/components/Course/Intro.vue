@@ -4,12 +4,9 @@ import {reactive } from "vue";
 export default {
     setup(){
         const imgItem = reactive([
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"冬令營",text:"test1", to:'/Course/Winter'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"夏令營",text:"test2", to:'/Course/Summer'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"實體課程",text:"test4", to:'/Course/Entity'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"線上直播課程",text:"test3", to:'/Course/Live'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"線上預錄課程",text:"test3", to:'/Course/Prepare'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"遊留學",text:"test5", to:'/Course/Study'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"冬令營/夏令營",text:"test1", to:'/Course/Winter'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"平日營/假日營",text:"test2", to:'/Course/Summer'},
+            {src:"https://www.evoneic.com/img/img1.jpg",title:"實體課/線上課",text:"test4", to:'/Course/Entity'},
         ])
         return {imgItem};
     }

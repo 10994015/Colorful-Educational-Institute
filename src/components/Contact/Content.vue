@@ -26,6 +26,7 @@ export default {
         width:100%;
         padding-bottom: 100px;
         background-color: #F4F4F4;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         @media screen and (max-width:768px){
             padding-top: 350px;
         }
