@@ -1,8 +1,10 @@
 
 <script>
 import {reactive} from "vue";
+import {useStore} from "vuex";
 export default {
     setup(){
+        const store = useStore();
         const post = reactive([
             {id:"1",title:"2021/7/23 《冰芬帶孩子繽紛一夏》2021暑期線上夏令營即將在8月開始囉",content:"內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文"},
             {id:"2",title:"2021/7/24《冰芬帶孩子繽紛一夏》2021暑期線上夏令營即將在8月開始囉",content:"1"},
@@ -13,9 +15,12 @@ export default {
             {id:"7",title:"2021/7/26 《冰芬帶孩子繽紛一夏》2021暑期線上夏令營即將在8月開始囉",content:"6"},
             {id:"8",title:"2021/7/26 《冰芬帶孩子繽紛一夏》2021暑期線上夏令營即將在8月開始囉",content:"7"},
             {id:"9",title:"2021/7/26 《冰芬帶孩子繽紛一夏》2021暑期線上夏令營即將在8月開始囉",content:"8"},
-        ])
+        ]);
+        const handnewsClickModule = ()=>{
+            store.dispatch('handnewsClickModule');
+        }
 
-        return {post};
+        return {post, handnewsClickModule};
     }
 }
 </script>
@@ -24,6 +29,14 @@ export default {
       <img src="@/assets/images/a.jpg" alt="">
       <h2>{{post[0].title}}</h2>
       <p>{{post[0].content}}</p>
+      <div class="smallImgBox">
+          <img src="@/assets/images/a.jpg" alt="" @click="handnewsClickModule">
+          <img src="@/assets/images/a.jpg" alt="">
+          <img src="@/assets/images/a.jpg" alt="">
+          <img src="@/assets/images/a.jpg" alt="">
+          <img src="@/assets/images/a.jpg" alt="">
+          <img src="@/assets/images/a.jpg" alt="">
+      </div>
   </div>
 </template>
 
@@ -34,6 +47,7 @@ export default {
     width:56%;
     margin:auto;
     padding-top: 8em;
+    padding-bottom: 50px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     @media screen and (max-width:1024px){
         width:80%;
@@ -60,6 +74,17 @@ export default {
         margin:25px auto;
         @media screen and (max-width:1024px){
             margin:25px auto 75px;
+        }
+    }
+    > .smallImgBox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width:100%;
+        > img{
+            width:33%;
+            margin:5px 0;
+            cursor: pointer;
         }
     }
 }
