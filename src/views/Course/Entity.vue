@@ -6,7 +6,7 @@ export default {
 <template>
   <div class="winter">
       <h1>將於近期更新，敬請期待</h1>
-      <img src="https://carboncst.com/activated/admin/uploads/upload/95350-error.jpg" alt="">
+      <img src="http://localhost:8080/95350-error.jpg" alt="">
   </div>
 </template>
 

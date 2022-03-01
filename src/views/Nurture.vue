@@ -2,13 +2,11 @@
 import Card from "@/components/Nurture/Card.vue";
 import Step from "@/components/Nurture/Step.vue";
 import Class from "@/components/Nurture/Class.vue";
-import Brochure from "@/components/Nurture/Brochure.vue";
 export default {
     components:{
       Card,
       Step,
       Class,
-      Brochure,
     },
     setup(){
       return {};
@@ -20,7 +18,6 @@ export default {
     <Card />
     <Step />
     <Class />
-    <Brochure />
   </div>
 </template>
 

@@ -3,9 +3,9 @@ import {reactive, ref} from "vue";
 export default {
   setup(){
     const studyitem = reactive([
-      {text:'學生留學', src: 'https://10994015.github.io/images/images/study.jpg', idx:"1" },
-      {text:'交換學生', src: 'https://10994015.github.io/images/images/study2.jpg',idx:"2"},
-      {text:'留學代辦', src: 'https://10994015.github.io/images/images/study3.jpg',idx:"3"},
+      {text:'學生留學', src: 'http://localhost:8080/study.jpg', idx:"1" },
+      {text:'交換學生', src: 'http://localhost:8080/study2.jpg',idx:"2"},
+      {text:'留學代辦', src: 'http://localhost:8080/study3.jpg',idx:"3"},
     ])
 
     const overBackText = (e)=>{

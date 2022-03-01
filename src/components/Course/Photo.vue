@@ -8,7 +8,7 @@ export default {
       store.dispatch('handOpenPhoto');
     }
     const src = computed(()=>{
-      return store.state.photoSrc;
+      return store.getters.photoSrc;
     })
     const isPhoto = computed(()=>{
       return store.getters.isPhoto;

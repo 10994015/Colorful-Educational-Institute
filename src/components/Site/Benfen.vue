@@ -63,7 +63,7 @@ export default {
     <div class="left">
           <h2>冰芬美語</h2>
           <p>地址：校本部 🚩 新竹縣竹北市縣政二路596號<br />
-          每周六 參觀日 10:00-16:30 (請先預約)<br />
+          週二至週六 參觀日 10:00-16:30 (請先預約)<br />
           預約電話：03-558-9868<br />
             Email: service@karlschool.org </p>
             <button @click="handOpenModule($event)" value="冰芬美語">我要租借</button>

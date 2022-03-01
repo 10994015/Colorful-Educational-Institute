@@ -65,7 +65,7 @@ export default {
       <div class="right">
           <h2>約翰小學</h2>
           <p>地址：校本部 🚩 新竹縣竹北市勝利八街一段181號<br />
-          每周六 參觀日 10:00-16:30 (請先預約)<br />
+          每周六、日 10:00-16:30 (請先預約)<br />
           預約電話：03-6581938, 0953-755677<br />
             Email: service@johanschool.org</p>
             <button value="約翰小學" @click="handOpenModule($event)">我要租借</button>

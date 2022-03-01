@@ -15,6 +15,7 @@ export default createStore({
     isPhoto:false,
     PhotoSrc:'',
     isnewsModule:false,
+    simgsrc:'',
   },
   mutations: {
     handopenMenu(state){
@@ -35,7 +36,8 @@ export default createStore({
       state.photoSrc = src;
       state.isPhoto = !state.isPhoto;
     },
-    handnewsClickModule(state){
+    handnewsClickModule(state, simgsrc){
+      state.simgsrc = simgsrc;
       state.isnewsModule = !state.isnewsModule;
     }
 
@@ -58,8 +60,9 @@ export default createStore({
       let photoSrc = src;
       commit('handOpenPhoto', photoSrc);
     },
-    handnewsClickModule({commit}){
-      commit('handnewsClickModule');
+    handnewsClickModule({commit}, src){
+      let simg = src;
+      commit('handnewsClickModule', simg);
     }
   },
   getters:{
@@ -86,6 +89,9 @@ export default createStore({
     },
     isnewsModule(state){
       return state.isnewsModule;
+    },
+    simgsrc(state){
+      return state.simgsrc;
     }
   },
   modules: {

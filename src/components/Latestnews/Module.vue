@@ -7,6 +7,9 @@ export default {
         const isnewsModule = computed(()=>{
             return store.getters.isnewsModule;
         })
+        const src = computed(()=>{
+          return store.getters.simgsrc;
+        })
         const isClose = ref(false);
         const enterClose = ()=>{
             isClose.value = true;
@@ -17,7 +20,7 @@ export default {
         const handnewsClickModule = ()=>{
             store.dispatch('handnewsClickModule');
         }
-        return {isnewsModule, handnewsClickModule, isClose, enterClose, leaveClose};
+        return {isnewsModule, handnewsClickModule, isClose, enterClose, leaveClose, src};
     }
 }
 </script>
@@ -25,7 +28,7 @@ export default {
   <div class="module" v-if="isnewsModule">
       <div class="back" @click="handnewsClickModule"></div>
       <div class="img" @mouseenter="enterClose" @mouseleave="leaveClose">
-          <img src="@/assets/images/a.jpg" alt="">
+          <img :src="src" alt="">
           <Transition name="fade">
             <i class="fas fa-times" v-show="isClose" @click="handnewsClickModule"></i>
           </Transition>
@@ -56,8 +59,8 @@ export default {
             z-index: 99999999999999999;
         }
         >.img{
-            width:600px;
-            height: 600px;
+            width:auto;
+            height: 650px;
             z-index: 9999999999999999999;
             position: relative;
             > img{
