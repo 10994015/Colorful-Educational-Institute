@@ -18,9 +18,9 @@ export default {
         </div>
         <div class="contactus">
             <h2>聯絡資訊</h2>
-            <p>聯絡電話:03-0000000</p>
-            <p>客服中心:<br>colorful@gmail.com</p>
-            <p>地址:<br>新竹市東區光復路一段271號3樓</p>
+            <p>聯絡電話:03-5670018</p>
+            <p>客服中心:<br>Jenny.Peng@ice-finland.pro</p>
+            <p>地址:<br>300新竹市東區光復路一段271號3樓(原聯合補習班址、台新銀行樓上)</p>
             <p>企業合作:
                 <!-- cuclass -->
                 清大Stem Shcool
