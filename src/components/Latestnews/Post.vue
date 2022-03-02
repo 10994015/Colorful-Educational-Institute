@@ -5,7 +5,7 @@ import {reactive } from "vue";
 export default {
  setup(){
         const post = reactive([
-            {id:"1",title:"【冰芬學習園地】",
+            {id:1,title:"【冰芬學習園地】",
             content:`#Slang #俚語<br />
                 這是一個有趣好玩的主題🥳<br />
                 <br />

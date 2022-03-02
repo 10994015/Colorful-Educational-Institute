@@ -42,8 +42,8 @@ export default {
                   <input type="text" required placeholder="">
               </label>
               <label for="">
-                  <p>電子信箱(必填)</p>
-                  <input type="email" required>
+                  <p>電子信箱</p>
+                  <input type="email">
               </label>
               <label for="">
                   <p>租借時間</p>

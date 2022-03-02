@@ -1,4 +1,5 @@
 <script>
+import {ref } from "vue";
 export default {
      props:{
         title:{
@@ -11,7 +12,10 @@ export default {
         }
     },
     setup(props){
-        return {props};
+        const introtext = ref(`Success by Choice 選擇冰芬，使你的未來繽紛！
+                            夢想是動力的來源，想要闖出一片屬於自己的天空，需要有高度的競爭力，冰芬在此提供雙語學習、Steam科學、程式設計、表演藝術及國際證照等專業課程，給予孩子多元學習與發展的機會，並開創無限可能。
+                            `)
+        return {props, introtext};
     }
 }
 </script>
@@ -19,16 +23,31 @@ export default {
    <section id="course">
             <h1>{{props.title[0].title}}</h1>
             <div class="content">
-                <img src="@/assets/images/pic01.png" alt="">
-                <div class="contentText">
-                    <h2>實現孩子的夢想</h2>
-                    <p>{{props.lorem}}</p>
-                    <router-link to="/Course">SEE MORE</router-link>
+                <div>
+                    <h2>標題</h2>
+                    <img src="http://localhost:8080/03.png" alt="">
                 </div>
+                <div>
+                    <h2>標題</h2>
+                    <img src="http://localhost:8080/03.png" alt="">
+                </div>
+                <div>
+                    <h2>標題</h2>
+                    <img src="http://localhost:8080/03.png" alt="">
+                </div>
+
+                <!-- <div class="contentText">
+                    <h2>實現孩子的夢想</h2>
+                    <p>{{introtext}}</p>
+                    <router-link to="/Course">SEE MORE</router-link>
+                </div> -->
                 
             </div>
             
         </section>
+        
+       
+        
 </template>
 <style lang="scss" scoped>
 #course{
@@ -47,9 +66,13 @@ export default {
         @media screen and (max-width:960px){
             flex-direction: column;
         }
-        > img{
+        h2{
+            text-align: center;
+            color:#fff;
+        }
+         img{
             margin: 10px 50px;
-            width:450px;
+            width:250px;
             @media screen and (max-width:500px){
                 width:90%;
                 margin:10px auto;

@@ -5,21 +5,23 @@ export default {
 </script>
 <template>
   <div class="enter">
-      <h1>將課程帶入你們家</h1>
+      <h1>標題再想想</h1>
       <div class="item">
           <img src="@/assets/images/a.jpg" alt="">
           <div class="text">
-              <h2>這是標題這是標題這是標題</h2>
-              <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
+              <h2>企業學校團班</h2>
+              <p>專業家教：我們將派專業教師，於指定日期時間至家中進行授課</p>
+              <p>企業團班：我們將派專業講師團隊至企業團體授課</p>
           </div>
       </div>
-      <div class="item item-reverse">
+      <!-- 一塊就好 -->
+      <!-- <div class="item item-reverse">
           <div class="text">
               <h2>這是標題</h2>
               <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
           </div>
           <img src="@/assets/images/a.jpg" alt="">
-      </div>
+      </div> -->
   </div>
 </template>
 

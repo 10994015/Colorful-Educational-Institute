@@ -3,9 +3,9 @@ import { reactive } from "vue";
 export default {
   setup(){
     const card = reactive([
-      {class:'fas fa-handshake',title:'標題標題標題1',text:'冰芬致力打造專業教學平台，受眾皆為想認真學習及增強英文能力的人，讓您的教學能精準地被看見。'},
-      {class:'fas fa-paint-brush',title:'標題標題標題2',text:'冰芬致力打造專業教學平台，受眾皆為想認真學習及增強英文能力的人，讓您的教學能精準地被看見。'},
-      {class:'fas fa-vote-yea',title:'標題標題標題3',text:'冰芬致力打造專業教學平台，受眾皆為想認真學習及增強英文能力的人，讓您的教學能精準地被看見。'},
+      {class:'fas fa-paint-brush',title:'TESOL課程',text:'不止是英語的實力，更強調的是「教學」。專業學術訓練範圍包括：語言學、語言教學法、方法學、外語教學理論與方法、教材設計、課程設計、課程管理、跨國文化的溝通與認識以及各種測驗評量、研究及教學實習。'},
+      {class:'fas fa-vote-yea',title:'STEAM教育',text:'STEAM是指跨域整合科學、科技、工程、藝術與數學。課程結束，必須參與教學演示檢定及通過檢核。為維持師資水準，定期參與師培與回訓機制，培訓新科技素材與技術，開發新課程與相關評量機制，並期望帶給學生們更高品質跨域教育。'},
+      {class:'fas fa-handshake',title:'參加對象',text:'1. 職前教師<br />2. 在職教師<br />3. 想增進教學技能的各方人才'},
     ])
     return {card};
   }
@@ -16,7 +16,7 @@ export default {
       <div class="card" v-for="item in card" :key="item.title">
         <i :class="item.class"></i>
         <h2>{{item.title}}</h2>
-        <p>{{item.text}}</p>
+        <p v-html="item.text"></p>
       </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
     }
     > .card{
       width:300px;
-      height: 350px;
+      height: 420px;
       border: 1px #ccc solid;
       border-radius: 8px;
       display: flex;
@@ -73,6 +73,7 @@ export default {
       }
       > p{
         color:#222;
+        line-height: 1.6;
       }
     }
 }

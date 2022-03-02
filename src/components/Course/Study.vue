@@ -20,6 +20,7 @@ export default {
 }
 </script>
 <template>
+<!-- 先不用放 -->
 <div class="study">
   <h1>遊留學</h1>
   <div class="studyBox">

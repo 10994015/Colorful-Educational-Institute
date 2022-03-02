@@ -25,6 +25,7 @@ export default {
 <template>
   <div class="entity">
       <h1>實體課程</h1>
+      <!-- content 左邊放課表，右邊放教室的圖片 -->
       <div class="content">
           <div class="top">
              <div class="text">
@@ -50,6 +51,7 @@ export default {
              </div>
              <img src="@/assets/images/benfen.png" alt="">
           </div>
+          <!-- 照片放到場地租借 -->
           <div class="bottom">
                 <h2>照片牆</h2>
                 <div class="imgbox">
@@ -57,6 +59,7 @@ export default {
                 </div>
             </div>
            <div class="center">
+               <!-- 這塊放到聯絡我們 -->
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.386173646672!2d121.01740541483659!3d24.78222678409088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468363ae7276ba5%3A0x4e22c2db67d6fe92!2zMzAw5paw56u55biC5p2x5Y2A5YWJ5b6p6Lev5LiA5q61Mjcx6JmfM-aokw!5e0!3m2!1szh-TW!2stw!4v1645111991019!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                   <div class="text">
                       <p>聯絡人 : 03-5670081</p>

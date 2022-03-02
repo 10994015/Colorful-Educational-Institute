@@ -31,5 +31,4 @@ export default {
   <Course :title="title" :lorem="lorem" />
   <Nurture  :title="title" :lorem="lorem" />
   <Site  :title="title"/>
-  <Contact :title="title" />
 </template>

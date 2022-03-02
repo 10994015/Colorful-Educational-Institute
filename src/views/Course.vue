@@ -33,7 +33,6 @@ export default {
    <Enter />
    <Online />
    <Entity />
-   <Study />
    <Contact />
    <Photo />
    <!-- <Camp /> -->

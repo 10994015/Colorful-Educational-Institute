@@ -9,7 +9,7 @@ export default {
         const store = useStore();
         const data = reactive({data:{}});
         const post = reactive([
-            {id:"1",title:"【冰芬學習園地】",
+            {id:1,title:"【冰芬學習園地】",
             content:`#Slang #俚語<br />
                 這是一個有趣好玩的主題🥳<br />
                 <br />
@@ -35,9 +35,9 @@ export default {
                 #英文課程 #國小美語 #國中美語 #高中美語 #成人美語 #全民英檢 #證照檢定 #托福 #雅思 #線上課程 #EnglishClass #EnglishLearning #英文 #學英文 #英文課 #線上上課<br />
                 `,
                 img:"http://localhost:8080/01.png",
-                smallimg:{
-                    img:"http://localhost:8080/01.png",
-                }},
+                smallimg:[
+                    {img:"http://localhost:8080/01.png"},
+                ]},
                 {id:2,title:"【冰芬文教 課程推薦】",
                 content:`🌏Your first step towards #globalization.<br />
                 #國際領袖營 #InternationalLeadership <br />
@@ -59,9 +59,8 @@ export default {
                 #營隊 #外師 #國小 #國中 #高中 #課後照顧  #英文 #數學 #自然 #生活會話  #聽 #讀 #說 #寫 #EnglishLearning #LearningEnglish<br />
                 `,
                 img:"http://localhost:8080/error.png",
-                smallimg:{
-                    
-                }},
+                smallimg:[],
+                },
                 {id:3,title:"【#冰芬文教 課程推薦】",
                 content:`🏆SuccessByChoice<br />
                 讓孩子贏在起跑點 🏃♀️ <br />
@@ -97,9 +96,10 @@ export default {
                 #課後照顧 #國小 #英文 #數學 #自然 #生活會話 #外師 #聽 #讀 #說 #寫 #EnglishLearning #LearningEnglish<br />
                 `,
                 img:"http://localhost:8080/03.png",
-                smallimg:{
-                    img:"http://localhost:8080/03.png",
-                }},
+                smallimg:[
+                    {img:"http://localhost:8080/03.png"},
+                    {img:"http://localhost:8080/01.png"},
+                ]},
 
         ])
         const handnewsClickModule = (e)=>{
@@ -111,10 +111,13 @@ export default {
             post.forEach((item)=>{
                 if(item.id == route.params.id){
                     data.data = item;
+                    console.log("ok", item.id);
+                    console.log("data=>", data.data.smallimg);
+                    
+                    
                 }
                 
             })
-            console.log(data);
             
         })
 
@@ -124,8 +127,8 @@ export default {
 </script>
 <template>
   <div id="text">
-      <img :src="data.data.img" alt="">
       <h2>{{data.data.title}}</h2>
+      <img :src="data.data.img" alt="">
       <p v-html="data.data.content"></p>
       <div class="smallImgBox">
           <img v-for="simg in data.data.smallimg" :src="simg.img" :key="simg.img" alt="" @click="handnewsClickModule($event)">
@@ -155,8 +158,8 @@ export default {
             height: 300px;
         }
     }
-    > h1{
-        font-size: 21px;
+    > h2{
+        font-size: 30px;
         color:#333;
         margin:auto;
         width:100%;
@@ -166,6 +169,7 @@ export default {
         width:100%;
         color:#666;
         margin:25px auto;
+        font-size: 18px;
         @media screen and (max-width:1024px){
             margin:25px auto 75px;
         }
@@ -173,12 +177,23 @@ export default {
     > .smallImgBox{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         width:100%;
         > img{
             width:33%;
+            height: 250px;
             margin:5px 0;
+            margin-right: 5px;
+            object-fit: cover;
+            display: block;
             cursor: pointer;
+            @media screen and (max-width:768px){
+                width:48%;
+            }
+            @media screen and (max-width:500px){
+                width:100%;
+                margin-right: 0;
+            }
         }
     }
 }
