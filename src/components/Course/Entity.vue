@@ -60,12 +60,7 @@ export default {
             </div>
            <div class="center">
                <!-- 這塊放到聯絡我們 -->
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.386173646672!2d121.01740541483659!3d24.78222678409088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468363ae7276ba5%3A0x4e22c2db67d6fe92!2zMzAw5paw56u55biC5p2x5Y2A5YWJ5b6p6Lev5LiA5q61Mjcx6JmfM-aokw!5e0!3m2!1szh-TW!2stw!4v1645111991019!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  <div class="text">
-                      <p>聯絡人 : 03-5670081</p>
-                      <p>地址 : 300台灣新竹市東區光復路一段271號3樓</p>
-                      <p>營業時間 : 周一至周五10:00-17:00</p>
-                  </div>
+                  
              </div>
       </div>
   </div>
