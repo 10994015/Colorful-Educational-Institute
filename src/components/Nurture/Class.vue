@@ -4,11 +4,11 @@ export default {
   setup(){
     const box = reactive([
       {class:'far fa-thumbs-up',name:'國中小數學'},
+      {class:'far fa-thumbs-up',name:'高中數學'},
       {class:'far fa-thumbs-up',name:'國中小英文'},
-      {class:'far fa-thumbs-up',name:'國中小國文'},
-      {class:'far fa-thumbs-up',name:'多益培訓班'},
-      {class:'far fa-thumbs-up',name:'英檢培訓班'},
-      {class:'far fa-thumbs-up',name:'程式設計班'},
+      {class:'far fa-thumbs-up',name:'高中英文'},
+      {class:'far fa-thumbs-up',name:'成人英文'},
+      {class:'far fa-thumbs-up',name:'國中小全科'},
     ])
     return {box };
   }

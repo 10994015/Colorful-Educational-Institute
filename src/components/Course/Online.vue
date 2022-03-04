@@ -23,12 +23,9 @@ export default {
       <div class="line"></div>
       <div class="prepare">
           <h2>預錄課程</h2>
-          <p class="text">完成五步驟輕鬆上課去~</p>
+          <p class="text">完成一步驟立即上課去~</p>
           <ul class="step">
-                <li>報名上課</li>
-                <li>安排上課時間</li>
-                <li>安排專業教師</li>
-                <li>選擇一對一或一對多教學</li>
+                <li>購買課程</li>
                 <li>立即上課</li>
           </ul>
       </div>

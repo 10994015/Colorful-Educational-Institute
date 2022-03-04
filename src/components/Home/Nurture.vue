@@ -40,8 +40,16 @@ export default {
                 </div>
                 
                 <div class="contentText">
-                    <div><h2>Tesol</h2></div>
-                    <div><h2>Steam</h2></div>
+                    <div>
+                        <h2>Tesol</h2>
+                        <p>不止是英語的實力，更強調的是「教學」。
+                        專業學術訓練範圍包括：語言學、語言教學法、方法學、外語教學理論與方法、教材設計、課程設計、課程管理、跨國文化的溝通與認識以及各種測驗評量、研究及教學實習。
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Steam</h2>
+                        <p>STEAM是指跨域整合科學、科技、工程、藝術與數學。課程結束，必須參與教學演示檢定及通過檢核。為維持師資水準，定期參與師培與回訓機制，培訓新科技素材與技術，開發新課程與相關評量機制，並期望帶給學生們更高品質跨域教育。</p>
+                    </div>
                 </div>
                 </div>
         </section>
@@ -51,7 +59,7 @@ export default {
     padding: 80px 0 100px 0;
     .content{
         .contentText{
-            width:600px;
+            width:900px;
             margin:auto;
             font-family: "微軟正黑體";
             margin-top: 100px;
@@ -62,13 +70,23 @@ export default {
                 width:90%;
             }
             > div{
-                width:50%;
-                height: 200px;
-                background-color: #ccc;
+                width:400px;
+                height: 220px;
                 text-align: center;
+                margin: 0 50px;
+                border: 1px #ddd solid;
+                border-radius: 8px;
+                padding: 15px;
+                box-sizing: border-box;
+                box-shadow: 0px 5px 15px #ccc;
+                &:hover{
+                    transform: translateY(-5px);
+                    transition: all .5s ease;
+                }
             }
             h2{
                 color:#1484c4;
+                margin-bottom: 5px;
             }
         }
         .step{

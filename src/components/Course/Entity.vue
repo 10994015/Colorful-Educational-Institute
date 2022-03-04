@@ -52,16 +52,8 @@ export default {
              <img src="@/assets/images/benfen.png" alt="">
           </div>
           <!-- 照片放到場地租借 -->
-          <div class="bottom">
-                <h2>照片牆</h2>
-                <div class="imgbox">
-                     <img :src="item.src" alt="" :key="item.src" v-for="item in imgbox" @click="handOpenPhoto($event)">
-                </div>
-            </div>
-           <div class="center">
-               <!-- 這塊放到聯絡我們 -->
-                  
-             </div>
+          
+           
       </div>
   </div>
 </template>
@@ -146,42 +138,7 @@ export default {
                 }
             }
         }
-        > .bottom{
-            width:100%;
-            > h2 {
-                text-align: center;
-                font-weight: 500;
-                margin: 25px 0;
-                font-size: 24px;
-            }
-            > .imgbox {
-                    display: grid;
-                    grid-template-columns: 300px 300px 300px;
-                    grid-template-rows: 300px 300px 300px;
-                    grid-column-gap: 30px;
-                    grid-row-gap: 30px;
-                    justify-content: center;
-                    @media screen and (max-width:1024px){
-                        grid-template-columns: 200px 200px 200px;
-                        grid-template-rows: 200px 200px 200px;
-                    }
-                    @media screen and (max-width:768px){
-                        grid-template-columns: 250px 250px ;
-                        grid-template-rows: 250px 250px 250px 250px;
-                    }
-                    @media screen and (max-width:520px){
-                        grid-template-columns: 90% ;
-                        grid-template-rows: repeat(9,300px);
-                        grid-row-gap: 100px;
-                        margin-bottom: 50px;
-                    }
-                >img {
-                    width:100%;
-                    cursor: pointer;
-                }
-
-            }
-        }
+        
     }
 }
 

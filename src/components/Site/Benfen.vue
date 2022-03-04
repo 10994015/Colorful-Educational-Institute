@@ -45,12 +45,34 @@ export default {
       
     }
     const imgbox = reactive([
-      {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
-      {src:'https://www.ice-finland.club/styles/images/summer/da.jpg'},
-      {src:'https://www.ice-finland.club/styles/images/summer/00.jpg'},
-      {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
-      {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
-     
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_0.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_1.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_2.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_3.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_4.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_5.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_6.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_7.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_8.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_9.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_10.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_11.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_12.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_13.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_14.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_15.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_16.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_17.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_18.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_19.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_20.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_21.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_22.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_23.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_24.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_25.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_26.jpg'},
+      {src:'/colorful/LINE_ALBUM_冰芬_220222_27.jpg'},
     ])
     
    
@@ -62,10 +84,10 @@ export default {
   <div class="benfen">
     <div class="left">
           <h2>冰芬美語</h2>
-          <p>地址：校本部 🚩 新竹縣竹北市縣政二路596號<br />
+          <p>地址：校本部 🚩 新竹市東區光復路一段271號3樓<br />
           週二至週六 參觀日 10:00-16:30 (請先預約)<br />
-          預約電話：03-558-9868<br />
-            Email: service@karlschool.org </p>
+          預約電話：03-567-0018<br />
+            Email: service@ice-finland.pro </p>
             <button @click="handOpenModule($event)" value="冰芬美語">我要租借</button>
       </div>
   
@@ -79,6 +101,7 @@ export default {
       <Transition  name="fade">
         <i class="fa-solid fa-circle-chevron-right rightbtn" v-show="isbenfen" @click="handRightFn"></i>
       </Transition >
+      <router-link to="/Site/colorfulphoto" class="seemore">查看更多</router-link>
     </div>
   </div>
 </template>
@@ -139,6 +162,18 @@ export default {
       }
       @media screen and (max-width:600px){
           width:90%;
+      }
+      >.seemore{
+        display: block;
+        width:150px;
+        height: 40px;
+        background-color: #FF876E;
+        color:#fff;
+        font-weight: 600;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 10px;
+        float: right;
       }
     >.imgbox{
       width:500px;

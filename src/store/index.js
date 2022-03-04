@@ -13,7 +13,7 @@ export default createStore({
     lendModule:false,
     isSchool:'',
     isPhoto:false,
-    PhotoSrc:'',
+    photoSrc:'',
     isnewsModule:false,
     simgsrc:'',
   },
@@ -92,6 +92,9 @@ export default createStore({
     },
     simgsrc(state){
       return state.simgsrc;
+    },
+    photoSrc(state){
+      return state.photoSrc;
     }
   },
   modules: {

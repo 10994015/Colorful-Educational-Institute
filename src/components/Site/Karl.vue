@@ -44,10 +44,7 @@ export default {
         }
         const imgbox = reactive([
             {src:'https://www.karlschool.org/uploads/karlschool/images/202105122207243668.jpg'},
-            {src:'https://www.ice-finland.club/styles/images/english/about.jpg'},
-            {src:'https://www.ice-finland.club/styles/images/summer/00.jpg'},
-            {src:'https://www.ice-finland.club/styles/images/summer/da2.png'},
-            {src:'https://www.ice-finland.club/styles/images/banner/class-2.jpg'},
+           
         ])
         return {imgbox, handOpenModule, handLightbox, isKarl, isKarlover, isKarlout, handLeftMethod, handRightMethod};
     }
@@ -73,6 +70,7 @@ export default {
         <Transition  name="fade">
             <i class="fa-solid fa-circle-chevron-right rightbtn" v-show="isKarl" @click="handRightMethod"></i>
         </Transition >
+         <router-link to="" class="seemore">查看更多</router-link>
       </div>
   </div>
 </template>
@@ -134,6 +132,18 @@ export default {
         }
          @media screen and (max-width:600px){
           width:90%;
+      }
+      >.seemore{
+        display: block;
+        width:150px;
+        height: 40px;
+        background-color: #FF876E;
+        color:#fff;
+        font-weight: 600;
+        text-align: center;
+        line-height: 40px;
+        margin-top: 10px;
+        float: right;
       }
         > .imgbox {
             width:500px;
