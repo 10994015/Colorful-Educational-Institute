@@ -1,7 +1,7 @@
 
 
 <script>
-import {reactive } from "vue";
+import {reactive, ref } from "vue";
 export default {
  setup(){
         const post = reactive([
@@ -98,18 +98,33 @@ export default {
                 }},
 
         ])
-        return {post};
+        const searchText = ref('');
+        const newsearchArr = reactive([]);
+        const searchClick = ()=>{
+            // console.log(searchText.value);
+            newsearchArr.length = 0;
+            post.forEach((item)=>{
+               if(item.title.includes(searchText.value)){
+                   newsearchArr.push(item);
+               }
+            })
+            
+        }
+        searchClick();
+        // console.log("rerere".includes("re"));
+        
+        return {post, searchText, searchClick, newsearchArr};
     }
 }
 </script>
 <template>
   <div id="latestnews">
       <div class="search">
-          <input type="text" placeholder="搜尋文章...">
-          <button><i class="fas fa-search"></i></button>
+          <input type="text" placeholder="搜尋文章..." v-model="searchText" @keyup="searchClick">
+          <button @click="searchClick"><i class="fas fa-search"></i></button>
       </div>
       <div class="post">
-          <div class="post-item" v-for="item in post" :key="item.title">
+          <div class="post-item" v-for="item in newsearchArr" :key="item.title">
               <img :src="item.img" alt="">
               <div class="content">
                   <h2 class="title">{{item.title}}</h2>

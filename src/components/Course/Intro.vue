@@ -4,8 +4,8 @@ import {reactive } from "vue";
 export default {
     setup(){
         const imgItem = reactive([
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"冬令營/夏令營",text:"test1", to:'/Course/Winter'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"平日營/假日營",text:"test2", to:'/Course/Summer'},
+            {src:"/0307.jpg",title:"冬令營/夏令營",text:"test1", to:'/Course/Winter'},
+            {src:"/0308.jpg",title:"平日營/假日營",text:"test2", to:'/Course/Summer'},
             {src:"https://www.evoneic.com/img/img1.jpg",title:"實體課/線上課",text:"test4", to:'/Course/Entity'},
         ])
         return {imgItem};
@@ -22,7 +22,7 @@ export default {
                     <img :src="item.src" alt="">
                     <h2>{{item.title}}</h2>
                 </router-link>
-                <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕 </p>
+                <p>將於近期更新，請敬請期待。 </p>
             </div>
         </div>
      </div>
