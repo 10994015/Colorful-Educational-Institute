@@ -39,7 +39,7 @@ export default {
             }
         }
         const imgbox = reactive([
-            {src:'https://10994015.github.io/images/images/b.jpg'},
+            {src:'/b.jpg'},
         ])
         return {imgbox, handLeftClick, handRightClick, handLightbox, isJohn, isJohnover, isJohnout, handOpenModule};
     }

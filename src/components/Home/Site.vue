@@ -9,9 +9,9 @@ export default {
     },
     setup(props){
         const siteItem = reactive([
-            {img:"https://10994015.github.io/bingfen/styles/images/a.jpg",title:"冰芬美語"},
-            {img:"https://10994015.github.io/bingfen/styles/images/b.jpg",title:"約翰小學"},
-            {img:"https://10994015.github.io/bingfen/styles/images/c.jpg",title:"卡爾中學"},
+            {img:"/a.jpg",title:"冰芬美語"},
+            {img:"/b.jpg",title:"約翰小學"},
+            {img:"/c.jpg",title:"卡爾中學"},
         ])
         return {props, siteItem};
     }

@@ -31,6 +31,7 @@ export default {
 .content{
         width:80%;
         margin:auto;
+        margin-top: 100px;
         padding-bottom: 100px;
         background-color: #F4F4F4;
         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;

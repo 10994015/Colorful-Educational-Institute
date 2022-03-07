@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
   <div class="enter">
-      <h1>標題再想想</h1>
+      <h1>企業學校團班</h1>
       <div class="item">
           <img src="@/assets/images/a.jpg" alt="">
           <div class="text">

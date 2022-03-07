@@ -30,9 +30,9 @@ export default {
                 📩加入官方line報名或詢問：@516ttumg <br />
                 #英文課程 #國小美語 #國中美語 #高中美語 #成人美語 #全民英檢 #證照檢定 #托福 #雅思 #線上課程 #EnglishClass #EnglishLearning #英文 #學英文 #英文課 #線上上課<br />
                 `,
-                img:"http://localhost:8080/01.png",
+                img:"/01.png",
                 smallimg:{
-                    img:"http://localhost:8080/01.png",
+                    img:"/01.png",
                 }},
                 {id:2,title:"【冰芬文教 課程推薦】",
                 content:`🌏Your first step towards #globalization.<br />
@@ -54,7 +54,7 @@ export default {
                 📩冰芬官網：https://www.ice-finland.club<br />
                 #營隊 #外師 #國小 #國中 #高中 #課後照顧  #英文 #數學 #自然 #生活會話  #聽 #讀 #說 #寫 #EnglishLearning #LearningEnglish<br />
                 `,
-                img:"http://localhost:8080/error.png",
+                img:"/error.png",
                 smallimg:{
                     
                 }},
@@ -92,9 +92,9 @@ export default {
                 📩冰芬官網：https://www.ice-finland.club<br />
                 #課後照顧 #國小 #英文 #數學 #自然 #生活會話 #外師 #聽 #讀 #說 #寫 #EnglishLearning #LearningEnglish<br />
                 `,
-                img:"http://localhost:8080/03.png",
+                img:"/03.png",
                 smallimg:{
-                    img:"http://localhost:8080/03.png",
+                    img:"/03.png",
                 }},
 
         ])

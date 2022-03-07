@@ -13,9 +13,9 @@ export default {
     },
     setup(props){
         const courselist = reactive([
-            {title:"機器人STEAM教室", img:"http://localhost:8080/001.png", id:"0001"},
-            {title:"TVBS贏在說話主播營", img:"http://localhost:8080/002.png", id:"0002"},
-            {title:"STEAM SCHOOL", img:"http://localhost:8080/003.png", id:"0003"},
+            {title:"機器人STEAM教室", img:"/001.png", id:"0001"},
+            {title:"TVBS贏在說話主播營", img:"/002.png", id:"0002"},
+            {title:"STEAM SCHOOL", img:"/003.png", id:"0003"},
 
         ])
         return {props, courselist };
@@ -64,6 +64,8 @@ export default {
             @media screen and (max-width:500px){
                 width:90%;
                 margin:10px auto;
+                margin-bottom: 30px;
+                display: block;
                 
             }
         }

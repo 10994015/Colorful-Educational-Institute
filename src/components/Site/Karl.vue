@@ -43,7 +43,7 @@ export default {
             }
         }
         const imgbox = reactive([
-            {src:'https://www.karlschool.org/uploads/karlschool/images/202105122207243668.jpg'},
+            {src:'/c.jpg'},
            
         ])
         return {imgbox, handOpenModule, handLightbox, isKarl, isKarlover, isKarlout, handLeftMethod, handRightMethod};

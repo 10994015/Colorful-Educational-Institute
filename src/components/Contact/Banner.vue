@@ -15,7 +15,7 @@ export default {
                         300新竹市東區光復路一段271號3樓(原聯合補習班址、台新銀行樓上)<br />
                         連絡電話：03-567-0018
                     </p>
-                    <span>03-3012967</span>
+                    <span>03-567-0018</span>
                 </div>
                 <div class="item">
                     <i class="fa-solid fa-comments"></i>
@@ -54,7 +54,7 @@ export default {
             }
             .item{
                 width:500px;
-                height: 300px;
+                height: 350px;
                 background-color: #fff;
                 margin:0 100px;
 	            box-shadow: 0 5px 25px #aaa;

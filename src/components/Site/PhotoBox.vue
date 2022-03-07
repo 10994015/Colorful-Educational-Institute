@@ -5,7 +5,7 @@ export default {
     setup(){
         const store = useStore();
         const imgbox = reactive([
-            {src:'http://localhost:8080/colorful/LINE_ALBUM_冰芬_220222_0.jpg'},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_0.jpg'},
             {src:'/colorful/LINE_ALBUM_冰芬_220222_1.jpg'},
             {src:'/colorful/LINE_ALBUM_冰芬_220222_2.jpg'},
             {src:'/colorful/LINE_ALBUM_冰芬_220222_3.jpg'},

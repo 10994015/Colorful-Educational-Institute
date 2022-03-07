@@ -68,6 +68,9 @@ export default {
 
             @media screen and (max-width:650px){
                 width:90%;
+                flex-direction: column;
+                margin:50px auto;
+                
             }
             > div{
                 width:400px;
@@ -83,6 +86,12 @@ export default {
                     transform: translateY(-5px);
                     transition: all .5s ease;
                 }
+                @media screen and (max-width:650px){
+                width:95%;
+                flex-direction: column;
+                margin:20px auto;
+                
+            }
             }
             h2{
                 color:#1484c4;
