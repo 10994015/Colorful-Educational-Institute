@@ -10,7 +10,7 @@ export default {
           <img src="@/assets/images/a.jpg" alt="">
           <div class="text">
               <h2>企業學校團班</h2>
-              <p>專業家教：我們將派專業教師，於指定日期時間至家中進行授課</p>
+              <p>線上家教：我們將派專業教師，於指定日期時間於線上進行授課</p>
               <p>企業團班：我們將派專業講師團隊至企業團體授課</p>
           </div>
       </div>
