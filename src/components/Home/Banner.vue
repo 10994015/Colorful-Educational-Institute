@@ -17,8 +17,11 @@ export default {
   <div id="banner">
             <!-- <i class="fas fa-chevron-circle-left" @click="leftimg"></i>
             <i class="fas fa-chevron-circle-right" @click="rightimg"></i> -->
-            <span>以互動參與感為原則，透過多元教學經驗<br>
-                讓學習更多 "冰芬" 色彩</span>
+            <span>
+                實現孩子的夢想<br>
+                Success by Choice 選擇冰芬，使你的未來繽紛！<br>
+                夢想是動力的來源，想要闖出一片屬於自己的天空，需要有高度的競爭力，冰芬在此提供雙語學習、Steam科學、程式設計、表演藝術及國際證照等專業課程，給予孩子多元學習與發展的機會，並開創無限可能。
+            </span>
             <a href="javascript:;" class="start">立即開始</a>
             <a href="javascript:;" class="imgslide" v-for="item in imglist" :key="item.url">
                 <img src="@/assets/images/banner.jpg" alt="">
@@ -61,14 +64,17 @@ export default {
         color:#fff;
         text-shadow: black 0.1em 0.1em 0.2em;
         font-weight: 600;
-        font-size: 36px;
+        font-size: 28px;
+        width:800px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         @media screen and (max-width:720px){
             left:5%;
+            width:400px
         }
     }
    .start{
         position: absolute;
-        top: 360px;
+        top: 500px;
         left:10%;
         display: block;
         width:180px;
@@ -88,7 +94,7 @@ export default {
             transition: all .5s ease;
         }
         @media screen and (max-width:720px){
-            top: 420px;
+            top: 500px;
         }
         @media screen and (max-width:400px){
             top: 500px;

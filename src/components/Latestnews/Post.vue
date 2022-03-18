@@ -58,7 +58,7 @@ export default {
                 smallimg:{
                     
                 }},
-                {id:3,title:"【#冰芬文教 課程推薦】",
+                {id:3,title:"【冰芬文教 課程推薦】",
                 content:`🏆SuccessByChoice<br />
                 讓孩子贏在起跑點 🏃♀️ <br />
                 <br />
@@ -112,7 +112,6 @@ export default {
         }
         searchClick();
         // console.log("rerere".includes("re"));
-        
         return {post, searchText, searchClick, newsearchArr};
     }
 }
