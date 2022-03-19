@@ -1,32 +1,66 @@
 
 
 <script>
-import {reactive} from "vue";
+import {reactive, ref, onMounted} from "vue";
 export default {
    
     setup(){
-        
+        const dotsHtml = ref('');
+        const imgslide = document.getElementsByClassName('imgslide');
+        let num = 0;
         const imglist = reactive([
-            {url:'./assets/images/banner.jpg'},
+            {url:'/banner.png'},
+            {url:'/banner2.png'},
+            {url:'/banner3.png'},
+            {url:'/banner4.png'},
         ])
-        return {imglist, };
+        const leftimg = ()=>{
+            num--;
+            if(num<0){
+                num=imgslide.length-1;
+            }
+            for(let i=0;i<imgslide.length;i++){
+                imgslide[i].style.transform = "translateX(-"+num+"00%)";
+            }
+             // transform: translateX(-50%);
+        }
+        const rightimg = ()=>{
+            num++;
+            if(num>imgslide.length-1){
+                num=0;
+            }
+            for(let i=0;i<imgslide.length;i++){
+                imgslide[i].style.transform = "translateX(-"+num+"00%)";
+            }
+             // transform: translateX(-50%);
+        }
+        setInterval(()=>{
+            num++;
+        })
+        onMounted(()=>{
+            for(let i=0;i<imgslide.length;i++){
+                dotsHtml.value += "<div class='dot dot"+i+"'></div>";
+            }
+        })
+        return {imglist, rightimg, leftimg, dotsHtml};
     }
 }
 </script>
 <template>
   <div id="banner">
-            <!-- <i class="fas fa-chevron-circle-left" @click="leftimg"></i>
-            <i class="fas fa-chevron-circle-right" @click="rightimg"></i> -->
-            <span>
+            <i class="fas fa-chevron-circle-left" @click="leftimg"></i>
+            <i class="fas fa-chevron-circle-right" @click="rightimg"></i>
+            <!-- <span>
                 實現孩子的夢想<br>
                 Success by Choice 選擇冰芬，使你的未來繽紛！<br>
                 夢想是動力的來源，想要闖出一片屬於自己的天空，需要有高度的競爭力，冰芬在此提供雙語學習、Steam科學、程式設計、表演藝術及國際證照等專業課程，給予孩子多元學習與發展的機會，並開創無限可能。
-            </span>
+            </span> -->
             <a href="javascript:;" class="start">立即開始</a>
             <a href="javascript:;" class="imgslide" v-for="item in imglist" :key="item.url">
-                <img src="@/assets/images/banner.jpg" alt="">
+               <img :src="item.url" alt="">
+               <!-- <img src="@/assets/images/a.jpg"> -->
             </a>
-            <!-- <div ref="dot" id="dots" v-html="dotsHtml"></div> -->
+            <div id="dots" v-html="dotsHtml"></div>
         </div>
 </template>
 <style lang="scss" scoped>
@@ -104,10 +138,13 @@ export default {
     .imgslide{
         transition: all .5s ease;
         min-width:100%;
+        max-width:100%;
         height: 100%;
+        // transform: translateX(-50%);
         img{
             object-fit: cover;
             min-width:100%;
+            max-width:100%;
             height: 100%;
         }
     }
