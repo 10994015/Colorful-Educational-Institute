@@ -4,9 +4,9 @@ import {reactive } from "vue";
 export default {
     setup(){
         const imgItem = reactive([
-            {src:"/0307.jpg",title:"冬令營/夏令營",text:"test1", to:'/Course/Winter'},
-            {src:"/0308.jpg",title:"平日營/假日營",text:"test2", to:'/Course/Summer'},
-            {src:"https://www.evoneic.com/img/img1.jpg",title:"實體課/線上課",text:"test4", to:'/Course/Entity'},
+            {src:"/images/0307.jpg",title:"冬令營/夏令營",text:"test1", to:'/Course/Winter'},
+            {src:"/images/0308.jpg",title:"平日營/假日營",text:"test2", to:'/Course/Summer'},
+            {src:"/images/school.jpg",title:"實體課/線上課",text:"test4", to:'/Course/Entity'},
         ])
         return {imgItem};
     }

@@ -1,43 +1,78 @@
 <script>
 import {reactive, onMounted } from "vue";
 import {useStore} from "vuex";
+import {useRoute} from "vue-router";
 export default {
     setup(){
+        const route = useRoute();
+        const routenum = Number(route.params.id);
+        console.log(routenum);
+        
         const store = useStore();
         const imgbox = reactive([
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_0.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_1.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_2.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_3.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_4.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_5.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_6.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_7.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_8.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_9.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_10.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_11.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_12.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_13.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_14.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_15.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_16.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_17.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_18.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_19.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_20.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_21.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_22.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_23.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_24.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_25.jpg'},
-            {src:'/colorful/LINE_ALBUM_冰芬_220222_26.jpg'},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_0.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_1.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_2.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_3.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_4.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_5.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_6.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_7.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_8.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_9.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_10.jpg,id:1'},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_11.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_12.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_13.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_14.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_15.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_16.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_17.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_18.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_19.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_20.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_21.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_22.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_23.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_24.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_25.jpg',id:1},
+            {src:'/colorful/LINE_ALBUM_冰芬_220222_26.jpg',id:1},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_0.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_1.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_2.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_3.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_4.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_5.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_6.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_7.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_8.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_9.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_10.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_12.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_13.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_14.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_15.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_16.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_17.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_18.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_19.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_20.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_21.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_22.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_23.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_24.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_25.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_26.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_27.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_28.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_29.jpg',id:2},
+            {src:'/karl/LINE_ALBUM_卡爾_220318_30.jpg',id:2},
         ])
             const handOpenPhoto = (e) =>{
             console.log(e.target.src);
             store.dispatch('handOpenPhoto',e.target.src)
         }
-        return {imgbox, handOpenPhoto}
+        return {imgbox, handOpenPhoto, routenum}
     }
 }
 </script>
@@ -45,7 +80,7 @@ export default {
   <div class="bottom">
         <h2>照片牆</h2>
         <div class="imgbox">
-                <img :src="item.src" alt="" :key="item.src" v-for="item in imgbox" @click="handOpenPhoto($event)">
+                <img :src="item.src" alt="" :key="item.src" v-for="item in imgbox" @click="handOpenPhoto($event)" v-show="item.id === routenum">
         </div>
     </div>
 </template>

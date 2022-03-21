@@ -12,10 +12,10 @@ export default {
         let num = 0;
         let timer = null;
         const imglist = reactive([
-            {url:'/banner.png'},
-            {url:'/banner2.png'},
-            {url:'/banner3.png'},
-            {url:'/banner4.png'},
+            {url:'/images/banner.png'},
+            {url:'/images//banner2.png'},
+            {url:'/images/banner3.png'},
+            {url:'/images/banner4.png'},
         ])
         
         const clearColor = ()=>{
@@ -59,7 +59,7 @@ export default {
                 }
                 clearColor();
                 dot[num].style.backgroundColor = "#1484c4";
-            },1000)
+            },6000)
         }
         playtime();
         onMounted(()=>{
@@ -87,7 +87,7 @@ export default {
                 Success by Choice 選擇冰芬，使你的未來繽紛！<br>
                 夢想是動力的來源，想要闖出一片屬於自己的天空，需要有高度的競爭力，冰芬在此提供雙語學習、Steam科學、程式設計、表演藝術及國際證照等專業課程，給予孩子多元學習與發展的機會，並開創無限可能。
             </span> -->
-            <a href="javascript:;" class="start">立即開始</a>
+            <!-- <a href="javascript:;" class="start">立即開始</a> -->
             <a href="javascript:;" class="imgslide" v-for="item in imglist" :key="item.url" @mouseover="stopTimer" @mouseout="startTimer">
                <img :src="item.url" alt="">
                <!-- <img src="@/assets/images/a.jpg"> -->
@@ -102,6 +102,7 @@ export default {
     overflow: hidden;
     height: 650px;
     position: relative;
+    margin-top: 50px;
     > .fa-chevron-circle-left{
         position: absolute;
         top: calc(50% - 21.1px);

@@ -101,7 +101,7 @@ export default {
       <Transition  name="fade">
         <i class="fa-solid fa-circle-chevron-right rightbtn" v-show="isbenfen" @click="handRightFn"></i>
       </Transition >
-      <router-link to="/Site/colorfulphoto" class="seemore">查看更多</router-link>
+      <router-link to="/Site/1" class="seemore">查看更多</router-link>
     </div>
   </div>
 </template>

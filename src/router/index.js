@@ -85,9 +85,9 @@ const routes = [
     component:()=> import('../views/Course/_id.vue')
   },
   {
-    path:'/Site/colorfulphoto',
-    name:'colorfulphoto',
-    component:()=> import('../views/Site/colorfulphoto.vue')
+    path:'/Site/:id',
+    name:'Site_id',
+    component:()=> import('../views/Site/_id.vue')
   },
   { path: '/:pathMatch(.*)', component: NotFoundComponent }
 ]

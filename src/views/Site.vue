@@ -27,6 +27,7 @@ export default {
   </div>
 </template>
 <style lang="scss" scoped>
-#site{
+.module{
+    z-index: 999999999999999999999;
 }
 </style>
