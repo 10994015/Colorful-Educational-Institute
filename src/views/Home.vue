@@ -32,3 +32,21 @@ export default {
   <Nurture  :title="title" :lorem="lorem" />
   <Site  :title="title"/>
 </template>
+
+<style lang="scss">
+.dot{
+    border-radius:50%;
+    min-width:18px;
+    min-height: 18px;
+    color:#fff;
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+    z-index: 999;
+    border:2px #fff solid;
+}
+.dot.dot0{
+  background-color: #1484c4;
+}
+</style>

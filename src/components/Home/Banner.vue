@@ -7,13 +7,22 @@ export default {
     setup(){
         const dotsHtml = ref('');
         const imgslide = document.getElementsByClassName('imgslide');
+        const dot = document.getElementsByClassName('dot');
+        
         let num = 0;
+        let timer = null;
         const imglist = reactive([
             {url:'/banner.png'},
             {url:'/banner2.png'},
             {url:'/banner3.png'},
             {url:'/banner4.png'},
         ])
+        
+        const clearColor = ()=>{
+            for(let i=0;i<dot.length;i++){
+                dot[i].style.backgroundColor = "#fff";
+            }
+        }
         const leftimg = ()=>{
             num--;
             if(num<0){
@@ -22,6 +31,8 @@ export default {
             for(let i=0;i<imgslide.length;i++){
                 imgslide[i].style.transform = "translateX(-"+num+"00%)";
             }
+            clearColor();
+            dot[num].style.backgroundColor = "#1484c4";
              // transform: translateX(-50%);
         }
         const rightimg = ()=>{
@@ -32,17 +43,38 @@ export default {
             for(let i=0;i<imgslide.length;i++){
                 imgslide[i].style.transform = "translateX(-"+num+"00%)";
             }
+            clearColor();
+            dot[num].style.backgroundColor = "#1484c4";
              // transform: translateX(-50%);
         }
-        setInterval(()=>{
-            num++;
-        })
+        
+        const playtime = ()=>{
+            timer = setInterval(()=>{
+                num++;
+                if(num>imgslide.length-1){
+                    num=0;
+                }
+                for(let i=0;i<imgslide.length;i++){
+                    imgslide[i].style.transform = "translateX(-"+num+"00%)";
+                }
+                clearColor();
+                dot[num].style.backgroundColor = "#1484c4";
+            },1000)
+        }
+        playtime();
         onMounted(()=>{
             for(let i=0;i<imgslide.length;i++){
                 dotsHtml.value += "<div class='dot dot"+i+"'></div>";
             }
         })
-        return {imglist, rightimg, leftimg, dotsHtml};
+
+        const stopTimer = ()=>{
+            clearInterval(timer);
+        }
+        const startTimer = ()=>{
+            playtime();
+        }
+        return {imglist, rightimg, leftimg, dotsHtml, stopTimer,startTimer};
     }
 }
 </script>
@@ -56,7 +88,7 @@ export default {
                 夢想是動力的來源，想要闖出一片屬於自己的天空，需要有高度的競爭力，冰芬在此提供雙語學習、Steam科學、程式設計、表演藝術及國際證照等專業課程，給予孩子多元學習與發展的機會，並開創無限可能。
             </span> -->
             <a href="javascript:;" class="start">立即開始</a>
-            <a href="javascript:;" class="imgslide" v-for="item in imglist" :key="item.url">
+            <a href="javascript:;" class="imgslide" v-for="item in imglist" :key="item.url" @mouseover="stopTimer" @mouseout="startTimer">
                <img :src="item.url" alt="">
                <!-- <img src="@/assets/images/a.jpg"> -->
             </a>
@@ -160,14 +192,17 @@ export default {
         background-color: transparent;
         > .dot{
             border-radius:50%;
-            width:18px;
-            height: 18px;
+            min-width:18px;
+            min-height: 18px;
             color:#fff;
             display: block;
             background-color: #fff;
             cursor: pointer;
             margin: 0 5px;
+            z-index: 999;
         }
     }
 }
+
+
 </style>

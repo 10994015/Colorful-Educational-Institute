@@ -6,13 +6,16 @@ export default {
       {class:'fas fa-paint-brush',title:'TESOL課程',text:'不止是英語的實力，更強調的是「教學」。專業學術訓練範圍包括：語言學、語言教學法、方法學、外語教學理論與方法、教材設計、課程設計、課程管理、跨國文化的溝通與認識以及各種測驗評量、研究及教學實習。'},
       {class:'fas fa-vote-yea',title:'STEAM教育',text:'STEAM是指跨域整合科學、科技、工程、藝術與數學。課程結束，必須參與教學演示檢定及通過檢核。為維持師資水準，定期參與師培與回訓機制，培訓新科技素材與技術，開發新課程與相關評量機制，並期望帶給學生們更高品質跨域教育。'},
       {class:'fas fa-handshake',title:'參加對象',text:'1. 職前教師<br />2. 在職教師<br />3. 想增進教學技能的各方人才'},
-      {class:'fa-solid fa-person',title:'人才培育',text:'一身的才華，就差一點點的火候，讓冰芬文教助你一臂之力！我們提供加拿大專業Tesol課程、實作演練及考核測驗，並且實習一個月，最終取得專業證照，一整套的教學，讓你發揮自己的天賦，成為有影響力的專業講師，透過難得的機會，使更多有志於多元教育的人才能被看見。'},
     ])
     return {card};
   }
 }
 </script>
 <template>
+<div class="bigtitle">
+  <h4>人才培育</h4>
+  <p>一身的才華，就差一點點的火候，讓冰芬文教助你一臂之力！我們提供加拿大專業Tesol課程、實作演練及考核測驗，並且實習一個月，最終取得專業證照，一整套的教學，讓你發揮自己的天賦，成為有影響力的專業講師，透過難得的機會，使更多有志於多元教育的人才能被看見。</p>
+</div>
   <div class="cardbox">
       <div class="card" v-for="item in card" :key="item.title">
         <i :class="item.class"></i>
@@ -22,11 +25,35 @@ export default {
   </div>
 </template>
 <style lang="scss" scoped>
+.bigtitle{
+  margin-top: 80px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h4{
+    font-size: 36px;
+    color:#1484c4;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  p{
+    width:700px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    margin:auto;
+    text-align: center;
+    @media screen and (max-width:700px){
+      width:90%;
+    }
+  }
+}
 .cardbox{
     width:100%;
     height: auto;
     display: flex;
-    padding-top: 8em;
+    padding-top: 4em;
     padding-bottom: 50px;
     justify-content: center;
     @media screen and (max-width:768px){
