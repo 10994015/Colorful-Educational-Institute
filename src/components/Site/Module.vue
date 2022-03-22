@@ -72,19 +72,20 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, .5);
     > .back{
-        width:100%;
-        height: 100%;
-        position: absolute;top: 0;
-        left:0;
-        background-color: rgba(0, 0, 0, .5);
+        // width:100%;
+        // height: 100%;
+        // position: absolute;top: 0;
+        // left:0;
+        // background-color: rgba(0, 0, 0, .5);
     }
     > .box{
         width:350px;
         min-height: 520px;
         height: auto;
         background-color: #fff;
-        z-index: 999999999999999999999999;
+        z-index: 999999999999999999999999999999999999999999999999;
         border-radius: 8px;
         overflow: hidden;
         > .header{
@@ -109,6 +110,7 @@ export default {
             width:100%;
             display: flex;
             flex-direction: column;
+            z-index: 99999999999999999999999999999999999999999999999999;
             > label{
                 display: flex;
                 flex-direction: column;

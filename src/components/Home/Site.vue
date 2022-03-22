@@ -11,7 +11,6 @@ export default {
         const siteItem = reactive([
             {img:"/images/a.jpg",title:"冰芬美語"},
             {img:"/images/b.jpg",title:"約翰小學"},
-            {img:"/images/c.jpg",title:"卡爾中學"},
         ])
         return {props, siteItem};
     }
@@ -27,7 +26,7 @@ export default {
                 </div>
               
             </div>
-            <a href="/Sites" class="seemore">SEE MORE</a>
+            <a href="/Site" class="seemore">SEE MORE</a>
         </section>
 </template>
 

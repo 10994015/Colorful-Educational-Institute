@@ -1,7 +1,7 @@
 
 
 <script>
-import {reactive, ref, onMounted} from "vue";
+import {reactive, ref, onMounted, onUpdated} from "vue";
 export default {
    
     setup(){
@@ -67,14 +67,33 @@ export default {
                 dotsHtml.value += "<div class='dot dot"+i+"'></div>";
             }
         })
-
+         const dotfn = (e)=>{
+                // console.log(Number(e.target.className.substr(7).trim()))
+                num = Number(e.target.className.substr(7).trim());
+                if(num>imgslide.length-1){
+                    num=0;
+                }
+                for(let i=0;i<imgslide.length;i++){
+                    imgslide[i].style.transform = "translateX(-"+num+"00%)";
+                }
+                clearColor();
+                dot[num].style.backgroundColor = "#1484c4";
+            }
+        onUpdated(()=>{
+            for(let i=0;i<dot.length;i++){
+                dot[i].addEventListener('click',dotfn);
+                console.log(dot[i]);
+                
+            }
+        })
+        
         const stopTimer = ()=>{
             clearInterval(timer);
         }
         const startTimer = ()=>{
             playtime();
         }
-        return {imglist, rightimg, leftimg, dotsHtml, stopTimer,startTimer};
+        return {imglist, rightimg, leftimg, dotsHtml, stopTimer,startTimer,dotfn};
     }
 }
 </script>
@@ -100,7 +119,7 @@ export default {
     display: flex;
     min-width:100%;
     overflow: hidden;
-    height: 650px;
+    height: 607px;
     position: relative;
     margin-top: 50px;
     > .fa-chevron-circle-left{
@@ -175,7 +194,7 @@ export default {
         height: 100%;
         // transform: translateX(-50%);
         img{
-            object-fit: cover;
+            object-fit: contain;
             min-width:100%;
             max-width:100%;
             height: 100%;

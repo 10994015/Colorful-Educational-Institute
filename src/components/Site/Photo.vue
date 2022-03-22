@@ -58,7 +58,7 @@ export default {
     z-index: 99999999999999999;
   }
    >.img{
-    width:600px;
+    width:auto;
     height: 600px;
     z-index: 9999999999999999999;
     position: relative;

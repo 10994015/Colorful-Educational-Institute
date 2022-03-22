@@ -21,13 +21,16 @@ export default {
       <Banner />
       <Benfen />
       <John />
-      <Karl />
       <Lightbox />
       <Module />
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 .module{
-    z-index: 999999999999999999999;
+        z-index: 999999999999999999999;
+    .box{
+        z-index: 99999999999999999999999999999999999999999999;
+    }
 }
+
 </style>

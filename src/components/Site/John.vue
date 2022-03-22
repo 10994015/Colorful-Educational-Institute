@@ -39,7 +39,7 @@ export default {
             }
         }
         const imgbox = reactive([
-            {src:'/b.jpg'},
+            {src:'/images/b.jpg'},
         ])
         return {imgbox, handLeftClick, handRightClick, handLightbox, isJohn, isJohnover, isJohnout, handOpenModule};
     }
@@ -57,7 +57,7 @@ export default {
           <Transition  name="fade">
             <i class="fa-solid fa-circle-chevron-right rightbtn" @click="handRightClick" v-show="isJohn"></i>
           </Transition >
-          <router-link to="" class="seemore">查看更多</router-link>
+          <router-link to="/Site/3" class="seemore">查看更多</router-link>
       </div>
       <div class="right">
           <h2>約翰小學</h2>

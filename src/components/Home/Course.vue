@@ -13,10 +13,9 @@ export default {
     },
     setup(props){
         const courselist = reactive([
-            {title:"STEAM SCHOOL", img:"/images/003.png", id:"0003"},
-            {title:"機器人STEAM教室", img:"/images/001.png", id:"0001"},
-            {title:"TVBS贏在說話主播營", img:"/images/002.png", id:"0002"},
-
+            {title:"STEAM SCHOOL", img:"/images/003.png", id:"/Latestnews/4"},
+            {title:"機器人STEAM教室", img:"/images/001.png", id:"/Latestnews/5"},
+            {title:"TVBS贏在說話主播營", img:"/images/002.png", id:"/Latestnews/6"},
         ])
         return {props, courselist };
     }
@@ -26,7 +25,7 @@ export default {
    <section id="course">
             <h1>{{props.title[0].title}}</h1>
             <div class="content">
-                <router-link :to="`/Course/${item.id}`" v-for="item in courselist" :key="item.title">
+                <router-link :to="item.id" v-for="item in courselist" :key="item.title">
                     <h2>{{item.title}}</h2>
                     <img :src="item.img" />
                 </router-link>

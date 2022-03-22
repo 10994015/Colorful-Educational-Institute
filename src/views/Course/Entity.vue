@@ -68,9 +68,35 @@ export default {
      > .entity,.online{
         width:700px;
         margin-bottom: 50px;
+        >h1{
+            margin-bottom: 6px;
+        }
+        >p{
+            font-size: 18px;
+        }
+        >h4{
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        >li{
+            font-size: 17px;
+        }
     }
     > .pre{
         width:700px;
+        >h1{
+            margin-bottom: 6px;
+        }
+        >p{
+            font-size: 18px;
+        }
+        >h4{
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        >li{
+            font-size: 17px;
+        }
     }
 }
 .title{
