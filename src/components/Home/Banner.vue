@@ -121,7 +121,24 @@ export default {
     overflow: hidden;
     height: 607px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
+    @media screen and (max-width:1518px){
+        height: 520px;
+        
+    }
+    @media screen and (max-width:1300px){
+        height: 400px;
+    }
+    @media screen and (max-width:900px){
+        height: 300px;
+    }
+    @media screen and (max-width:768px){
+        height: 250px;
+    }
+    @media screen and (max-width:600px){
+        height: 200px;
+    }
+    
     > .fa-chevron-circle-left{
         position: absolute;
         top: calc(50% - 21.1px);
@@ -198,6 +215,9 @@ export default {
             min-width:100%;
             max-width:100%;
             height: 100%;
+            @media screen and (max-width:600px){
+                object-fit: cover;
+            }
         }
     }
     #dots{

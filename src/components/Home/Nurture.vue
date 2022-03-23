@@ -66,7 +66,7 @@ export default {
             display: flex;
             justify-content: space-around;
 
-            @media screen and (max-width:650px){
+            @media screen and (max-width:900px){
                 width:90%;
                 flex-direction: column;
                 margin:50px auto;
@@ -86,7 +86,7 @@ export default {
                     transform: translateY(-5px);
                     transition: all .5s ease;
                 }
-                @media screen and (max-width:650px){
+                @media screen and (max-width:900px){
                 width:95%;
                 flex-direction: column;
                 margin:20px auto;
