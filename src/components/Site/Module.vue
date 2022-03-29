@@ -68,7 +68,7 @@ export default {
     position: fixed;
     top: 0;
     left:0;
-    z-index: 9999999999999999999999;
+    z-index: 99999999999999999999999999999999999999999999;
     display: flex;
     justify-content: center;
     align-items: center;

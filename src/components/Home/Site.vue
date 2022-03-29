@@ -10,7 +10,6 @@ export default {
     setup(props){
         const siteItem = reactive([
             {img:"/images/a.jpg",title:"冰芬美語"},
-            {img:"/images/b.jpg",title:"約翰小學"},
         ])
         return {props, siteItem};
     }

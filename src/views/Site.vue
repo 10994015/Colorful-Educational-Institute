@@ -20,7 +20,6 @@ export default {
   <div id="site">
       <Banner />
       <Benfen />
-      <John />
       <Lightbox />
       <Module />
   </div>

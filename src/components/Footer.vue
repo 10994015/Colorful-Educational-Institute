@@ -24,8 +24,6 @@ export default {
             <p>企業合作:
                 <!-- cuclass -->
                 清大Stem Shcool
-                卡爾中學
-                約翰小學
                 憶旺智慧
             </p>
         </div>
