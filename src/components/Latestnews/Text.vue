@@ -8,7 +8,7 @@ export default {
         const route = useRoute();
         const store = useStore();
         const data = reactive({data:{}});
-        const post = reactive([
+         const post = reactive([
             {id:1,title:"【Slang俚語教學】】",
             content:`英文俚語這是一個有趣好玩的主題🥳<br/><br/>
 
@@ -174,7 +174,8 @@ export default {
                 ◎2022/03/27(日) 上午09:00~12:00 <br/>
                 主題：機器人防疫小幫手<br/>
                 費用：3280元/人<br/>
-                授課地點：Johan School 新竹縣竹北市勝利八街一段181號<br/><br/>
+                授課地點：冰芬美語文理補習班<br> 
+                新竹市東區光復路一段271號3樓(原聯合補習班址，台新銀行樓上))<br/><br/>
 
                 ⭐️揪同學一起報名，前十位學費還享100元折扣喔⭐️<br/>
                 📣優惠名額有限，報名從速~~<br/><br/>
@@ -200,47 +201,33 @@ export default {
                 smallvidio:{
                 },
                 videoshow:false},
-                {id:6,title:"【TVBS擁有主播夢的同學機會來了】",
+                {id:6,title:"【夏令營新生家長說明會】",
                 content:`
-                2022 TVBS主播營<br/>
-                4月營隊課程來嘍～<br/><br/>
-
-                🗣說話不僅技術，也是門藝術，讓孩子學習自信表達！<br/>
-                培養孩子口語表達能力、邏輯思考力、臨場應變、國際觀，以及增加孩子自信心👍🏼<br/>
-                最後一天活動也將由專業主播及記者，帶著孩子體驗電視台模擬播報，讓他們有難忘回憶❤️<br/><br/>
-
-                👇以下為報名資格、課程時間、授課地點<br/>
-                報名資格：國三～高三<br/>
-                授課時間：<br/>
-                4/7、4/8 晚上18:00～21:00<br/>
-                4/9 上午9:00～下午17:00<br/>
-                4/10 上午10:00～下午17:00<br/>
-                授課地點：<br/>
-                4/7-4/9 卡爾實驗中學（新竹縣竹北市縣政二路596號）<br/>
-                4/10 內湖總部大樓攝影棚（台北市內湖區瑞光路451號）<br/><br/>
-
-                📌活動費用及詳細內容請洽<br/>
-                聯絡信箱：service@karlschool.org<br/>
-                聯絡電話：03-5589868<br/><br/>
-
-                ⚠️注意事項<br/>
-                1.滿15人開課，至多20人，未達15人則不開課<br/>
-                2.上課地點請自行前往<br/><br/>
-
-                🎉更多課程內容資訊等你來詢問<br/>
-                歡迎立即聯絡我們🙂
+                2022冰芬文教 夏令營暨新生家長說明會<br/><br/>
+                🏆Success By Choice 選擇冰芬，使你的未來繽紛<br/>
+                ★以下為六個說明會場次時間：<br/>
+                📣 04/22(五) 晚上18：00 (英文示範教學)<br/>
+                📣 04/23(六) 下午13：30 (數學示範教學)<br/>
+                📣 05/06(五) 晚上18：00 (英文示範教學)<br/>
+                📣 05/07(六) 下午13：30 (數學示範教學)<br/>
+                📣 05/20(五) 晚上18：00 (英文示範教學)<br/>
+                📣 05/21(六) 下午13：30 (數學示範教學)<br/><br/>
+                報名網址:<br/>
+                https://forms.gle/Xnp1ucCNX63bX2j8A<br/>
+                #名額有限<br/>
+                #參加說明會按讚打卡分享抽好禮<br/>
+                #現場報名另有優惠<br/><br/>
+                📩歡迎臉書粉絲團私訊詢問 <br/>
+                📩電子信箱：service@ice-finland.pro<br/>
+                📩官方line：@516ttumg<br/>
+                📩冰芬官網：https://www.ice-finland.club<br/><br/><br/>
+                #Steam #科學 #科技 #工程 #藝術 #數學 #實驗 #實作 #美術 #創造 #理解 #運算 #邏輯 #思考 #程式設計 #自然 #科學 #美語 #外師 #生活會話 #夏令營
                 `,
                 img:"/images/002.png",
                 smallimg:[
-                    {img:"/images/101.jpg"},
-                    {img:"/images/102.jpg"},
-                    {img:"/images/103.jpg"},
-                    {img:"/images/104.jpg"},
-                    {img:"/images/105.jpg"},
-                    {img:"/images/106.jpg"},
-                    {img:"/images/107.jpg"},
-                    {img:"/images/108.jpg"},
-                    
+                    {img:"/images/102.png"},
+                      {img:"/images/103.png"},
+                      {img:"/images/101.png"},
                 ],
                 smallvidio:{
                 },

@@ -15,7 +15,7 @@ export default {
         const courselist = reactive([
             {title:"STEAM SCHOOL", img:"/images/003.png", id:"/Latestnews/4"},
             {title:"機器人STEAM教室", img:"/images/001.png", id:"/Latestnews/5"},
-            {title:"TVBS贏在說話主播營", img:"/images/002.png", id:"/Latestnews/6"},
+            {title:"夏令營新生家長說明會", img:"/images/002.png", id:"/Latestnews/6"},
         ])
         return {props, courselist };
     }
