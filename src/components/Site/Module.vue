@@ -1,8 +1,11 @@
 <script>
 import {useStore} from "vuex";
 import { computed, ref , watch, onUpdated} from 'vue';
+import Email from "@/assets/smtp";
 export default {
     setup(){
+        console.log(Email);
+        
         const store = useStore();
         // const isSchool = computed(()=>{
         //     return store.getters.isSchool;
@@ -18,8 +21,18 @@ export default {
         const school  = computed(()=>{
             return store.state.isSchool;
         })
-     
-        return {lendModule, handCloseModule, school};
+        const sendEmail = ()=>{
+            Email.send({
+                SecureToken : "d59627fb-9f59-41de-8e0d-da979a7874ce",
+                To : 'a0938599191@gmail.com',
+                From : "a0938599191@gmail.com",
+                Subject : "測試一下拉",
+                Body : "章勳凱天竺鼠車車"
+            }).then(
+            message => alert(message)
+            );
+        }
+        return {lendModule, handCloseModule, school, sendEmail};
     }
 }
 </script>
@@ -55,7 +68,7 @@ export default {
                   <p>租借用途</p>
                   <textarea name="" placeholder="請簡短描述" id="" cols="20" rows="10"></textarea>
               </label>
-              <button>租借</button>
+              <button @click="sendEmail">租借</button>
           </form>
       </div>
   </div>

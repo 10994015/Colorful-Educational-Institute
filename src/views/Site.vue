@@ -24,6 +24,7 @@ export default {
       <Module />
   </div>
 </template>
+
 <style lang="scss">
 .module{
         z-index: 999999999999999999999;
