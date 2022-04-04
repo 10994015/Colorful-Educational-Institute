@@ -5,7 +5,7 @@ import {reactive, ref } from "vue";
 export default {
  setup(){
       const post = reactive([
-            {id:1,title:"【Slang俚語教學】】",
+            {id:1,title:"【Slang俚語教學】",
             content:`英文俚語這是一個有趣好玩的主題🥳<br/><br/>
 
             相信大家都知道希臘神話中的特洛伊戰爭<br/>
