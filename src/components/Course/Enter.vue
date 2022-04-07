@@ -14,14 +14,6 @@ export default {
               <p>企業團班：我們將派專業講師團隊至企業團體授課</p>
           </div>
       </div>
-      <!-- 一塊就好 -->
-      <!-- <div class="item item-reverse">
-          <div class="text">
-              <h2>這是標題</h2>
-              <p>點選此處並開始輸入。 聞臺加 相玩 處我麼 他生戰女取 因頭同 樓活生歡 從得 的起研 不綠她節了 念來 生示 留相都 確兒可石 己特 出老正告 絕</p>
-          </div>
-          <img src="@/assets/images/a.jpg" alt="">
-      </div> -->
   </div>
 </template>
 
